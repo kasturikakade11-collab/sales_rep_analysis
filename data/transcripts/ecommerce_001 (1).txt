@@ -1,0 +1,10 @@
+[00:00] Rep: Hi Mr. Kapoor, thanks for your time. So based on what we discussed, the family floater plan would run about ₹18,000/year for 5 lakh coverage.
+[00:12] Customer: That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.
+[00:20] Rep: I understand. Can I ask what coverage amount that quote was for?
+[00:27] Customer: I think it was 3 lakh, so maybe not directly comparable.
+[00:32] Rep: Right, ours includes a slightly higher coverage plus free annual health checkups. Is coverage amount or premium the bigger priority for you?
+[00:43] Customer: Premium, honestly. Money's a bit tight this year.
+[00:47] Rep: Understood. We do have a 3 lakh version at ₹11,500/year if that's more comfortable.
+[00:54] Customer: That sounds more reasonable. Let me think about it and discuss with my wife.
+[01:01] Rep: Of course, take your time. Should I call you back early next week?
+[01:08] Customer: Sure, Tuesday works.

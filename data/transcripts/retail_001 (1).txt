@@ -1,0 +1,9 @@
+[00:00] Rep: Hi Alex, following up from last week — any thoughts since the trial ended?
+[00:07] Customer: Yeah, sorry, it's been a busy week. We're still kind of figuring things out.
+[00:14] Rep: No worries. Was there anything specific holding it up?
+[00:18] Customer: I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.
+[00:27] Rep: Fair enough. Any particular feature gap you noticed on our side compared to them?
+[00:33] Customer: Not really a gap, more just... I don't know, I need to think about it more.
+[00:42] Rep: Understood. Would revisiting pricing help, or is it more about timing right now?
+[00:48] Customer: Probably more about timing honestly, maybe check in with me in a month?
+[00:56] Rep: Sure, I'll follow up in four weeks. In the meantime I'll send a couple of case studies from similar teams.

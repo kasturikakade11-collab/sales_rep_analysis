@@ -1,0 +1,9 @@
+[00:00] Customer: Hi, I'm calling because my internet's been slow the past few days.
+[00:06] Rep: Sorry to hear that, let me check your account... I see you're on our 50 Mbps plan currently.
+[00:14] Customer: Yeah, that's been fine before, not sure what changed.
+[00:19] Rep: I can run a line diagnostic, one moment... Okay, it looks fine on our end, likely just high household usage. Out of curiosity, how many devices are usually connected?
+[00:33] Customer: Probably 6-7 with the kids' devices and smart TVs.
+[00:38] Rep: That would explain it — for that many devices, our 150 Mbps plan would handle it much better, it's $10 more per month than what you're on now.
+[00:52] Customer: Oh that's not bad actually. Can I upgrade right now?
+[00:57] Rep: Absolutely, I can process that immediately and it'll be active within the hour.
+[01:04] Customer: Great, let's do that.

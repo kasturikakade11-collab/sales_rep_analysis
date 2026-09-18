@@ -1,0 +1,11 @@
+[00:00] Rep: Hi Raj, thanks for hopping on. How's the evaluation going on your end?
+[00:08] Customer: Good, we've narrowed it down to you and HubSpot actually.
+[00:12] Rep: Good to know — what's standing out about HubSpot for you?
+[00:18] Customer: Mainly their pricing tier feels more predictable for our size.
+[00:25] Rep: Makes sense. Our starter plan is $499/month for up to 10 seats — how does that compare?
+[00:33] Customer: That's close to what they quoted. My concern is really the onboarding time — we need this live in 3 weeks.
+[00:44] Rep: Totally doable — our implementation team can get you live in 2 weeks with dedicated support.
+[00:52] Customer: Okay that helps. I'll need to loop in our CFO for budget sign-off, but I already have approval up to $600/month.
+[01:02] Rep: Perfect, that's within your authority then. Want me to send a one-pager you can forward, and we lock in a follow-up for next Thursday?
+[01:14] Customer: Yes, let's do that. Thursday at 2pm works.
+[01:18] Rep: Great, I'll send a calendar invite and the pricing sheet today.

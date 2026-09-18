@@ -1,0 +1,9 @@
+[00:00] Rep: Hi Devika, thanks for making time. How did the team feel after the pilot?
+[00:06] Customer: Really positive actually. The reporting dashboard was a big hit.
+[00:11] Rep: Great to hear. Any concerns before we move forward?
+[00:17] Customer: Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon.
+[00:25] Rep: Good question — past 50 seats you'd move to our enterprise tier at $18/seat instead of $25, so it actually gets cheaper per seat.
+[00:36] Customer: Oh that's good, that addresses my concern.
+[00:40] Rep: Anything else, or should we move to a contract draft?
+[00:46] Customer: No, I think we're ready. I can sign off on this myself up to $50k annually, and we want to be live before next quarter starts.
+[01:00] Rep: Perfect, I'll get the contract over by Friday and we can target a start date next week.

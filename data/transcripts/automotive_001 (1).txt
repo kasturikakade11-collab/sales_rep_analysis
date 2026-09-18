@@ -1,0 +1,8 @@
+[00:00] Customer: Hi, is the wireless headphones set still in stock in black?
+[00:05] Rep: Yes, it's in stock! Currently priced at ₹2,499, down from ₹3,199.
+[00:12] Customer: Nice. Does it come with a warranty?
+[00:16] Rep: Yes, 1-year manufacturer warranty included.
+[00:20] Customer: Ok, do you have any ongoing discount codes?
+[00:25] Rep: You can use WELCOME10 for an extra 10% off on your first order.
+[00:31] Customer: Great, I'll place the order now then.
+[00:36] Rep: Awesome, let me know if you need help at checkout!

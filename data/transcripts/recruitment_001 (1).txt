@@ -1,0 +1,8 @@
+[00:00] Rep: Hi Anita, your renewal is coming up next month — wanted to check in on how things have been going.
+[00:10] Customer: Honestly, usage has dropped a lot on our end. A couple of the features we used most got deprecated.
+[00:19] Rep: I'm sorry to hear that — can you tell me which features specifically?
+[00:25] Customer: The old reporting export tool mainly. We've actually started testing Looker as a replacement for that piece.
+[00:33] Rep: That's helpful context. If we could get that export functionality restored or improved, would that change things?
+[00:42] Customer: It might, but I'd need to see it working before committing to anything, and I don't have a lot of time before the renewal date to evaluate.
+[00:56] Rep: Understood — let me get our product team to prioritize a demo of the fix this week, and we can push the renewal decision out by two weeks if needed.
+[01:12] Customer: That would help, yes.

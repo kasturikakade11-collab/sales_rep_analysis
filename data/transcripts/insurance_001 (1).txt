@@ -1,0 +1,9 @@
+[00:00] Rep: Hey, let me know if you need help finding a size.
+[00:05] Customer: Yeah actually, do you have this jacket in a medium?
+[00:10] Rep: Let me check — yes, we have one medium left in the back.
+[00:16] Customer: Perfect. Is it currently on any sale?
+[00:21] Rep: It's part of our end-of-season sale, 20% off, so it'd come to about $64.
+[00:30] Customer: Nice, I'll take it. Do you also have a matching scarf?
+[00:36] Rep: We do, it's a nice add-on, $15, want me to grab one?
+[00:42] Customer: Sure, why not.
+[00:45] Rep: Great, I'll ring both up for you at the counter.

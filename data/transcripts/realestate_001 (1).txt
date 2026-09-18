@@ -1,0 +1,10 @@
+[00:00] Rep: Hi Meera, good to connect again. Where are things on your side since our demo?
+[00:07] Customer: Honestly, the team liked it, but I'm not the one who signs off on new tools.
+[00:17] Rep: Got it — who would be the right person to loop in?
+[00:24] Customer: Not totally sure yet, it might go through procurement or might go through my director. We haven't figured that out.
+[00:33] Rep: Okay, no problem. And in terms of pricing, we discussed the $1,200/month plan last time — does that still feel right?
+[00:44] Customer: It's fine I think, but again I can't really confirm anything on budget right now.
+[00:52] Rep: Understood. Is there a timeline you're working toward, like a quarter you'd want this live by?
+[00:59] Customer: Not really, it's more of a "sometime this year" thing right now.
+[01:06] Rep: Okay. Would it help if I sent something you could forward internally to help identify the right stakeholder?
+[01:14] Customer: Yeah, that would help. Send it over and I'll try to get back to you.
