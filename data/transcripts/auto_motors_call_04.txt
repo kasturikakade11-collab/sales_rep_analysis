@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Karan, Rohit here regarding your inquiry on Apex Turbo SUV. How are you doing today?
+[00:05] Customer: Hi Rohit. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:11] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:15] Customer: Well, honestly, my primary hesitation is that we are range anxiety and fast-charging availability.
+[00:21] Rep: That's an entirely valid hesitation. Many of our clients bring up that exact concern during their initial review.
+[00:27] Customer: Right, so we just want to ensure we don't run into friction down the road.
+[00:34] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 16,000 rupees.
+[00:43] Customer: Okay, 16,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:52] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:02] Customer: That definitely removes a lot of the risk we were worried about.
+[01:07] Rep: How about we set up a dedicated follow-up session next Tuesday at 11 AM to review the full implementation plan?
+[01:16] Customer: That works well for me. Send the calendar invitation across.
+[01:20] Rep: Invitation is on its way, Karan. Looking forward to speaking then!

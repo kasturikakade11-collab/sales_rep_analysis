@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Neha, Rohit here regarding your inquiry on Tech Headhunting. How are you doing today?
+[00:07] Customer: Hi Rohit. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:12] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:17] Customer: Well, honestly, my primary hesitation is that we are base compensation lower than market hike expectation.
+[00:23] Rep: Completely understand that concern. Are you currently comparing our package with External Agency?
+[00:28] Customer: Yes, exactly. We had evaluated External Agency earlier, so we're trying to figure out which approach makes the most sense.
+[00:37] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 33,000 rupees.
+[00:43] Customer: Okay, 33,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:51] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[00:58] Customer: That definitely removes a lot of the risk we were worried about.
+[01:03] Rep: Take the time you need to review the proposal with your team.
+[01:08] Customer: Thanks, I'll go through the numbers internally and touch base when we are ready.
+[01:14] Rep: Sounds like a plan, Neha. Have a great rest of your day!

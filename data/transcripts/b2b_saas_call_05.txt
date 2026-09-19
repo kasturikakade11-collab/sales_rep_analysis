@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Sneha, Rahul here regarding your inquiry on CloudTrack. How are you doing today?
+[00:06] Customer: Hi Rahul. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:14] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:19] Customer: Well, honestly, my primary hesitation is that we are unsure if it integrates with existing stack.
+[00:24] Rep: Completely understand that concern. Are you currently comparing our package with HubSpot?
+[00:30] Customer: Yes, exactly. We had evaluated HubSpot earlier, so we're trying to figure out which approach makes the most sense.
+[00:40] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 46,000 rupees.
+[00:47] Customer: Okay, 46,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:54] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:02] Customer: That definitely removes a lot of the risk we were worried about.
+[01:08] Rep: How about we set up a dedicated follow-up session next Tuesday at 11 AM to review the full implementation plan?
+[01:15] Customer: That works well for me. Send the calendar invitation across.
+[01:19] Rep: Invitation is on its way, Sneha. Looking forward to speaking then!

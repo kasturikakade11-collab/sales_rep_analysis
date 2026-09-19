@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Farhan, Rahul here regarding your inquiry on SkyView DTH. How are you doing today?
+[00:05] Customer: Hi Rahul. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:12] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:18] Customer: Well, honestly, my primary hesitation is that we are unexpected overage charges on bill.
+[00:25] Rep: Completely understand that concern. Are you currently comparing our package with Jio?
+[00:32] Customer: Yes, exactly. We had evaluated Jio earlier, so we're trying to figure out which approach makes the most sense.
+[00:42] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 42,000 rupees.
+[00:51] Customer: Okay, 42,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:58] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:08] Customer: That definitely removes a lot of the risk we were worried about.
+[01:12] Rep: If you're comfortable with the terms, I can share the confirmation link and activate your tier today.
+[01:17] Customer: Yes, let's proceed and lock this in right now.
+[01:21] Rep: Wonderful! Generating the secure agreement now. Welcome aboard, {prospect}!

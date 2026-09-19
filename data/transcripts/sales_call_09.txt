@@ -1,0 +1,18 @@
+[00:00] Rep: Thanks for joining, Meera. What are the main issues with your expense process?
+[00:13] Customer: Employees submit expenses by email, and approvals are often delayed.
+[00:23] Rep: How many employees are involved?
+[00:30] Customer: About 200.
+[00:36] Rep: What does your ideal process look like?
+[00:43] Customer: Mobile submission, automatic policy checks, and faster approvals.
+[00:52] Rep: We can support all three.
+[00:59] Customer: We're also considering Ramp.
+[01:07] Rep: Understood. What will determine the final choice?
+[01:14] Customer: Ease of rollout and whether finance can configure the policies themselves.
+[01:24] Rep: Do you have a budget range?
+[01:31] Customer: Finance hasn't given me a number yet.
+[01:38] Rep: Who else needs to approve it?
+[01:45] Customer: Our CFO and IT security team.
+[01:52] Rep: When are you hoping to decide?
+[02:00] Customer: Probably next quarter, but nothing is confirmed.
+[02:08] Rep: I'll send our security documentation and a rollout plan.
+[02:16] Customer: Okay.

@@ -1,0 +1,73 @@
+id,domain,outcome,file
+b2b_saas_call_01,b2b_sales,customer needs to consult their team,data/transcripts/b2b_saas_call_01.txt
+b2b_saas_call_02,b2b_sales,next call booked,data/transcripts/b2b_saas_call_02.txt
+b2b_saas_call_03,b2b_sales,customer needs to consult their team,data/transcripts/b2b_saas_call_03.txt
+b2b_saas_call_04,b2b_sales,customer needs to consult their team,data/transcripts/b2b_saas_call_04.txt
+b2b_saas_call_05,b2b_sales,next call booked,data/transcripts/b2b_saas_call_05.txt
+b2b_saas_call_06,b2b_sales,deal won on the spot,data/transcripts/b2b_saas_call_06.txt
+b2b_saas_call_07,b2b_sales,deal won on the spot,data/transcripts/b2b_saas_call_07.txt
+b2b_saas_call_08,b2b_sales,deal won on the spot,data/transcripts/b2b_saas_call_08.txt
+b2b_saas_call_09,b2b_sales,customer needs to consult their team,data/transcripts/b2b_saas_call_09.txt
+support_telecom_call_01,call_center,issue resolved + upsell declined,data/transcripts/support_telecom_call_01.txt
+support_telecom_call_02,call_center,issue resolved + upsell accepted,data/transcripts/support_telecom_call_02.txt
+support_telecom_call_03,call_center,issue unresolved/escalated,data/transcripts/support_telecom_call_03.txt
+support_telecom_call_04,call_center,issue resolved + upsell declined,data/transcripts/support_telecom_call_04.txt
+support_telecom_call_05,call_center,issue resolved + upsell declined,data/transcripts/support_telecom_call_05.txt
+support_telecom_call_06,call_center,issue resolved + upsell accepted,data/transcripts/support_telecom_call_06.txt
+support_telecom_call_07,call_center,issue unresolved/escalated,data/transcripts/support_telecom_call_07.txt
+support_telecom_call_08,call_center,issue unresolved/escalated,data/transcripts/support_telecom_call_08.txt
+support_telecom_call_09,call_center,issue resolved + upsell accepted,data/transcripts/support_telecom_call_09.txt
+ecommerce_retail_call_01,ecommerce_chat,customer asks to speak to human,data/transcripts/ecommerce_retail_call_01.txt
+ecommerce_retail_call_02,ecommerce_chat,discount given and purchase made,data/transcripts/ecommerce_retail_call_02.txt
+ecommerce_retail_call_03,ecommerce_chat,discount given and purchase made,data/transcripts/ecommerce_retail_call_03.txt
+ecommerce_retail_call_04,ecommerce_chat,discount given and purchase made,data/transcripts/ecommerce_retail_call_04.txt
+ecommerce_retail_call_05,ecommerce_chat,discount given and purchase made,data/transcripts/ecommerce_retail_call_05.txt
+ecommerce_retail_call_06,ecommerce_chat,discount given and purchase made,data/transcripts/ecommerce_retail_call_06.txt
+ecommerce_retail_call_07,ecommerce_chat,purchase completed,data/transcripts/ecommerce_retail_call_07.txt
+ecommerce_retail_call_08,ecommerce_chat,customer asks to speak to human,data/transcripts/ecommerce_retail_call_08.txt
+ecommerce_retail_call_09,ecommerce_chat,customer asks to speak to human,data/transcripts/ecommerce_retail_call_09.txt
+auto_motors_call_01,automotive_sales,customer walks away to compare,data/transcripts/auto_motors_call_01.txt
+auto_motors_call_02,automotive_sales,test drive booked,data/transcripts/auto_motors_call_02.txt
+auto_motors_call_03,automotive_sales,financing discussion scheduled,data/transcripts/auto_motors_call_03.txt
+auto_motors_call_04,automotive_sales,financing discussion scheduled,data/transcripts/auto_motors_call_04.txt
+auto_motors_call_05,automotive_sales,financing discussion scheduled,data/transcripts/auto_motors_call_05.txt
+auto_motors_call_06,automotive_sales,deal closed,data/transcripts/auto_motors_call_06.txt
+auto_motors_call_07,automotive_sales,financing discussion scheduled,data/transcripts/auto_motors_call_07.txt
+auto_motors_call_08,automotive_sales,financing discussion scheduled,data/transcripts/auto_motors_call_08.txt
+auto_motors_call_09,automotive_sales,financing discussion scheduled,data/transcripts/auto_motors_call_09.txt
+realty_properties_call_01,real_estate,site visit scheduled,data/transcripts/realty_properties_call_01.txt
+realty_properties_call_02,real_estate,client needs time to decide,data/transcripts/realty_properties_call_02.txt
+realty_properties_call_03,real_estate,site visit scheduled,data/transcripts/realty_properties_call_03.txt
+realty_properties_call_04,real_estate,offer made,data/transcripts/realty_properties_call_04.txt
+realty_properties_call_05,real_estate,client needs time to decide,data/transcripts/realty_properties_call_05.txt
+realty_properties_call_06,real_estate,client needs time to decide,data/transcripts/realty_properties_call_06.txt
+realty_properties_call_07,real_estate,client needs time to decide,data/transcripts/realty_properties_call_07.txt
+realty_properties_call_08,real_estate,offer made,data/transcripts/realty_properties_call_08.txt
+realty_properties_call_09,real_estate,client needs time to decide,data/transcripts/realty_properties_call_09.txt
+insurance_policy_call_01,insurance,customer needs family consultation,data/transcripts/insurance_policy_call_01.txt
+insurance_policy_call_02,insurance,follow-up call scheduled,data/transcripts/insurance_policy_call_02.txt
+insurance_policy_call_03,insurance,follow-up call scheduled,data/transcripts/insurance_policy_call_03.txt
+insurance_policy_call_04,insurance,follow-up call scheduled,data/transcripts/insurance_policy_call_04.txt
+insurance_policy_call_05,insurance,policy purchased,data/transcripts/insurance_policy_call_05.txt
+insurance_policy_call_06,insurance,follow-up call scheduled,data/transcripts/insurance_policy_call_06.txt
+insurance_policy_call_07,insurance,policy purchased,data/transcripts/insurance_policy_call_07.txt
+insurance_policy_call_08,insurance,customer needs family consultation,data/transcripts/insurance_policy_call_08.txt
+insurance_policy_call_09,insurance,customer needs family consultation,data/transcripts/insurance_policy_call_09.txt
+am_renewal_call_01,customer_success,renewed + upsell accepted,data/transcripts/am_renewal_call_01.txt
+am_renewal_call_02,customer_success,renewed at same tier,data/transcripts/am_renewal_call_02.txt
+am_renewal_call_03,customer_success,renewed + upsell accepted,data/transcripts/am_renewal_call_03.txt
+am_renewal_call_04,customer_success,renewed + upsell accepted,data/transcripts/am_renewal_call_04.txt
+am_renewal_call_05,customer_success,renewed at same tier,data/transcripts/am_renewal_call_05.txt
+am_renewal_call_06,customer_success,renewed + upsell accepted,data/transcripts/am_renewal_call_06.txt
+am_renewal_call_07,customer_success,needs more time to decide,data/transcripts/am_renewal_call_07.txt
+am_renewal_call_08,customer_success,renewed at same tier,data/transcripts/am_renewal_call_08.txt
+am_renewal_call_09,customer_success,needs more time to decide,data/transcripts/am_renewal_call_09.txt
+talent_hiring_call_01,recruitment,candidate needs more time,data/transcripts/talent_hiring_call_01.txt
+talent_hiring_call_02,recruitment,counter-offer discussion scheduled,data/transcripts/talent_hiring_call_02.txt
+talent_hiring_call_03,recruitment,candidate accepts,data/transcripts/talent_hiring_call_03.txt
+talent_hiring_call_04,recruitment,candidate accepts,data/transcripts/talent_hiring_call_04.txt
+talent_hiring_call_05,recruitment,candidate needs more time,data/transcripts/talent_hiring_call_05.txt
+talent_hiring_call_06,recruitment,counter-offer discussion scheduled,data/transcripts/talent_hiring_call_06.txt
+talent_hiring_call_07,recruitment,candidate accepts,data/transcripts/talent_hiring_call_07.txt
+talent_hiring_call_08,recruitment,candidate accepts,data/transcripts/talent_hiring_call_08.txt
+talent_hiring_call_09,recruitment,counter-offer discussion scheduled,data/transcripts/talent_hiring_call_09.txt

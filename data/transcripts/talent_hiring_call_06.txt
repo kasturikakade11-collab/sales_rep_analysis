@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Manoj, Kavita here regarding your inquiry on Staffing Pipeline. How are you doing today?
+[00:07] Customer: Hi Kavita. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:13] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:19] Customer: Well, honestly, my primary hesitation is that we are candidate holding a competing written offer.
+[00:24] Rep: Completely understand that concern. Are you currently comparing our package with Direct Inhouse Recruiting?
+[00:32] Customer: Yes, exactly. We had evaluated Direct Inhouse Recruiting earlier, so we're trying to figure out which approach makes the most sense.
+[00:38] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 49,000 rupees.
+[00:44] Customer: Okay, 49,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:50] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[00:58] Customer: That definitely removes a lot of the risk we were worried about.
+[01:05] Rep: How about we set up a dedicated follow-up session next Tuesday at 11 AM to review the full implementation plan?
+[01:14] Customer: That works well for me. Send the calendar invitation across.
+[01:20] Rep: Invitation is on its way, Manoj. Looking forward to speaking then!

@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Tanya, Zara here regarding your inquiry on GlowLab Peptide Serum. How are you doing today?
+[00:07] Customer: Hi Zara. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:14] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:20] Customer: Well, honestly, my primary hesitation is that we are uncertainty about true-to-size fit.
+[00:28] Rep: Completely understand that concern. Are you currently comparing our package with Nike?
+[00:33] Customer: Yes, exactly. We had evaluated Nike earlier, so we're trying to figure out which approach makes the most sense.
+[00:41] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 28,000 rupees.
+[00:48] Customer: Okay, 28,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:57] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:08] Customer: That definitely removes a lot of the risk we were worried about.
+[01:12] Rep: Take the time you need to review the proposal with your team.
+[01:17] Customer: Thanks, I'll go through the numbers internally and touch base when we are ready.
+[01:22] Rep: Sounds like a plan, Tanya. Have a great rest of your day!

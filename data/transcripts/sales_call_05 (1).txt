@@ -1,0 +1,18 @@
+[00:00] Rep: Thanks for meeting, Neha. I'd like to understand how your team handles policy renewals.
+[00:15] Customer: Renewals are mostly manual. Agents check spreadsheets and send reminders themselves.
+[00:26] Rep: Does that create any issues?
+[00:33] Customer: Yes. Some customers don't get contacted early enough, and we lose visibility into pending renewals.
+[00:43] Rep: How many agents would need access?
+[00:50] Customer: Around 15.
+[00:58] Rep: Are you evaluating any other systems?
+[01:05] Customer: We're also looking at Guidewire.
+[01:13] Rep: What is your target for improving the renewal process?
+[01:20] Customer: We want automated reminders and a dashboard for upcoming renewals.
+[01:31] Rep: Have you allocated budget?
+[01:38] Customer: We have not finalized the budget yet.
+[01:47] Rep: Who will approve the solution?
+[01:55] Customer: Our operations head will make the recommendation, but the executive committee approves it.
+[02:05] Rep: Do you have a target implementation date?
+[02:13] Customer: We'd like to start in January, but the date is not fixed.
+[02:22] Rep: I'll send the workflow document and a pricing estimate by Friday.
+[02:30] Customer: Please include implementation costs too.
