@@ -5,26 +5,75 @@ import os
 import plotly.express as px
 
 st.set_page_config(page_title="Sales Call Intelligence Dashboard", layout="wide", page_icon="📞")
+st.markdown("""
+<div style="padding: 4px 0 20px 0;">
+    <h1 style="margin-bottom: 2px;">📞 Sales Call Intelligence</h1>
+    <p style="font-size: 14px; color: #9AA1AC; margin-top: 0;">
+        AI-powered call coaching, deal-risk detection, and rep performance analytics
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("""
 <style>
-    .main {
-        padding-top: 1rem;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { font-family: 'Inter', -apple-system, sans-serif; }
+
+    .main { background-color: #0B0E14; padding-top: 1rem; }
+    section[data-testid="stSidebar"] {
+        background-color: #10131B;
+        border-right: 1px solid #252A36;
     }
+
+    h1 {
+        font-weight: 800;
+        font-size: 30px;
+        color: #E8EAED;
+        letter-spacing: -0.5px;
+        margin-bottom: 4px;
+    }
+    h2, h3 {
+        font-weight: 600;
+        color: #E8EAED;
+    }
+    p, span, label { color: #9AA1AC; }
+
     div[data-testid="stMetric"] {
-        background-color: #1C1F26;
-        border: 1px solid #2D313A;
-        border-radius: 10px;
-        padding: 15px;
+        background: #151922;
+        border: 1px solid #252A36;
+        border-radius: 12px;
+        padding: 18px 20px;
     }
     div[data-testid="stMetricLabel"] {
-        font-size: 14px;
-        color: #A0A4AB;
+        font-size: 12px;
+        font-weight: 600;
+        color: #9AA1AC;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
     }
-    h1, h2, h3 {
-        font-family: 'Segoe UI', sans-serif;
+    div[data-testid="stMetricValue"] {
+        font-size: 26px;
+        font-weight: 700;
+        color: #E8EAED;
     }
+
+    div[data-testid="stDataFrame"] {
+        border-radius: 10px;
+        border: 1px solid #252A36;
+        overflow: hidden;
+    }
+
     .stAlert {
+        border-radius: 10px;
+        border-left: 4px solid;
+    }
+
+    hr { border-color: #252A36; margin: 1.6rem 0; }
+
+    div[data-baseweb="select"] > div {
+        background-color: #151922;
+        border-color: #252A36;
         border-radius: 8px;
     }
 </style>
@@ -103,7 +152,7 @@ page = st.sidebar.radio("Go to", ["Overview", "Call Detail", "Extraction Accurac
 # PAGE 1: OVERVIEW
 # ==========================================================
 if page == "Overview":
-    st.title("📞 Sales Call Intelligence & Coaching — Overview")
+    st.subheader("Overview")
     min_risk_calls = st.slider("Minimum risk calls to highlight", 0, 10, 3)
     if int(talk_df["at_risk"].sum()) >= min_risk_calls:
         st.error(f"🚨 {int(talk_df['at_risk'].sum())} calls need attention this week")
@@ -141,7 +190,7 @@ if page == "Overview":
 # PAGE 2: CALL DETAIL
 # ==========================================================
 elif page == "Call Detail":
-    st.title("🔍 Call Detail View")
+    st.subheader("Call Detail View")
     domain_filter = st.selectbox("Filter by domain", ["All"] + sorted(talk_df["domain"].unique().tolist()))
     if domain_filter != "All":
         filtered_calls = talk_df[talk_df["domain"] == domain_filter]["call_id"].tolist()
@@ -198,7 +247,7 @@ elif page == "Call Detail":
 # PAGE 3: EXTRACTION ACCURACY (across all calls)
 # ==========================================================
 elif page == "Extraction Accuracy":
-    st.title("📊 Extraction Accuracy — Across All Calls")
+    st.subheader("Extraction Accuracy — Across All Calls")
 
     st.subheader("Average F1 Score by Category")
     avg_by_category = eval_df.groupby("category")["f1_score"].mean().reset_index()
