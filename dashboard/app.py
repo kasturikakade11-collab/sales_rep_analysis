@@ -6,6 +6,30 @@ import plotly.express as px
 
 st.set_page_config(page_title="Sales Call Intelligence Dashboard", layout="wide", page_icon="📞")
 
+st.markdown("""
+<style>
+    .main {
+        padding-top: 1rem;
+    }
+    div[data-testid="stMetric"] {
+        background-color: #1C1F26;
+        border: 1px solid #2D313A;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    div[data-testid="stMetricLabel"] {
+        font-size: 14px;
+        color: #A0A4AB;
+    }
+    h1, h2, h3 {
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .stAlert {
+        border-radius: 8px;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # ---------- PATHS ----------
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TALK_METRICS_PATH = os.path.join(BASE, "outputs", "talk_metrics_summary.csv")
@@ -16,13 +40,21 @@ TRANSCRIPTS_DIR = os.path.join(BASE, "data", "transcripts")
 # ---------- LOAD DATA ----------
 @st.cache_data
 def load_data():
-    talk_df = pd.read_csv(TALK_METRICS_PATH)
-    eval_df = pd.read_csv(EVAL_PATH)
-    with open(GROUND_TRUTH_PATH, "r", encoding="utf-8") as f:
-        ground_truth = json.load(f)
-    return talk_df, eval_df, ground_truth
+    try:
+        talk_df = pd.read_csv(TALK_METRICS_PATH)
+        eval_df = pd.read_csv(EVAL_PATH)
+        with open(GROUND_TRUTH_PATH, "r", encoding="utf-8") as f:
+            ground_truth = json.load(f)
+        return talk_df, eval_df, ground_truth
+    except FileNotFoundError as e:
+        st.error(f"❌ Missing data file: {e}")
+        st.stop()
+with st.spinner("Loading call intelligence data..."):
+    talk_df, eval_df, ground_truth = load_data()
 
-talk_df, eval_df, ground_truth = load_data()
+if talk_df.empty:
+    st.warning("⚠️ No call data found yet. Run the pipeline to generate calls first.")
+    st.stop()   
 
 # Extract domain from call_id (e.g. "saas_001" -> "saas")
 def get_domain(call_id):
@@ -51,6 +83,10 @@ page = st.sidebar.radio("Go to", ["Overview", "Call Detail", "Extraction Accurac
 # ==========================================================
 if page == "Overview":
     st.title("📞 Sales Call Intelligence & Coaching — Overview")
+    min_risk_calls = st.slider("Minimum risk calls to highlight", 0, 10, 3)
+    if int(talk_df["at_risk"].sum()) >= min_risk_calls:
+        st.error(f"🚨 {int(talk_df['at_risk'].sum())} calls need attention this week")
+
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Total Calls", len(talk_df))
@@ -85,8 +121,13 @@ if page == "Overview":
 # ==========================================================
 elif page == "Call Detail":
     st.title("🔍 Call Detail View")
-
-    selected_call = st.selectbox("Choose a call", talk_df["call_id"].tolist())
+    domain_filter = st.selectbox("Filter by domain", ["All"] + sorted(talk_df["domain"].unique().tolist()))
+    if domain_filter != "All":
+        filtered_calls = talk_df[talk_df["domain"] == domain_filter]["call_id"].tolist()
+    else:
+        filtered_calls = talk_df["call_id"].tolist()
+    
+    selected_call = st.selectbox("Choose a call", filtered_calls)
 
     call_row = talk_df[talk_df["call_id"] == selected_call].iloc[0]
     gt = ground_truth.get(selected_call, {})
