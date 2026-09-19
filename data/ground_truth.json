@@ -76,8 +76,8 @@
       "budget constraints this year"
     ],
     "pricing_mentions": [
-      "\u20b918,000/year for 5 lakh coverage",
-      "\u20b911,500/year for 3 lakh coverage"
+      "₹18,000/year for 5 lakh coverage",
+      "₹11,500/year for 3 lakh coverage"
     ],
     "competitor_mentions": [
       "ICICI Lombard"
@@ -114,7 +114,7 @@
       "price comparison to competitor dealership"
     ],
     "pricing_mentions": [
-      "on-road price quote of \u20b99.8 lakh"
+      "on-road price quote of ₹9.8 lakh"
     ],
     "competitor_mentions": [
       "Honda dealership across town"
@@ -130,7 +130,7 @@
   "ecommerce_001": {
     "objections": [],
     "pricing_mentions": [
-      "\u20b92,499 discounted from \u20b93,199",
+      "₹2,499 discounted from ₹3,199",
       "extra 10% off with code WELCOME10"
     ],
     "competitor_mentions": [],
@@ -208,6 +208,1212 @@
     "bant_gap": {
       "present": false,
       "reason": "customer confirmed and ready to purchase upgrade immediately"
+    }
+  },
+  "b2b_saas_call_01": {
+    "objections": [
+      "worried about learning curve for the team"
+    ],
+    "pricing_mentions": [
+      "76,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Monday.com"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "b2b_saas_call_02": {
+    "objections": [
+      "pricing seems high vs current tool"
+    ],
+    "pricing_mentions": [
+      "58,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "b2b_saas_call_03": {
+    "objections": [
+      "pricing seems high vs current tool"
+    ],
+    "pricing_mentions": [
+      "56,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "b2b_saas_call_04": {
+    "objections": [
+      "unsure if it integrates with existing stack"
+    ],
+    "pricing_mentions": [
+      "63,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "b2b_saas_call_05": {
+    "objections": [
+      "unsure if it integrates with existing stack"
+    ],
+    "pricing_mentions": [
+      "46,000 rupees"
+    ],
+    "competitor_mentions": [
+      "HubSpot"
+    ],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "b2b_saas_call_06": {
+    "objections": [
+      "unsure if it integrates with existing stack"
+    ],
+    "pricing_mentions": [
+      "25,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "b2b_saas_call_07": {
+    "objections": [
+      "unsure if it integrates with existing stack"
+    ],
+    "pricing_mentions": [
+      "58,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "b2b_saas_call_08": {
+    "objections": [
+      "pricing seems high vs current tool"
+    ],
+    "pricing_mentions": [
+      "61,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Zoho"
+    ],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "b2b_saas_call_09": {
+    "objections": [
+      "needs approval from finance and leadership"
+    ],
+    "pricing_mentions": [
+      "45,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "support_telecom_call_01": {
+    "objections": [
+      "recurrent intermittent packet drops"
+    ],
+    "pricing_mentions": [
+      "42,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "none, prospect passed on offer"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "budget and timing misalignment resulted in deal not moving forward"
+    }
+  },
+  "support_telecom_call_02": {
+    "objections": [
+      "unexpected overage charges on bill"
+    ],
+    "pricing_mentions": [
+      "45,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Jio"
+    ],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "support_telecom_call_03": {
+    "objections": [
+      "unexpected overage charges on bill"
+    ],
+    "pricing_mentions": [
+      "77,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "support_telecom_call_04": {
+    "objections": [
+      "recurrent intermittent packet drops"
+    ],
+    "pricing_mentions": [
+      "22,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Airtel"
+    ],
+    "next_steps": [
+      "none, prospect passed on offer"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "budget and timing misalignment resulted in deal not moving forward"
+    }
+  },
+  "support_telecom_call_05": {
+    "objections": [
+      "unexpected overage charges on bill"
+    ],
+    "pricing_mentions": [
+      "75,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "none, prospect passed on offer"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "budget and timing misalignment resulted in deal not moving forward"
+    }
+  },
+  "support_telecom_call_06": {
+    "objections": [
+      "unexpected overage charges on bill"
+    ],
+    "pricing_mentions": [
+      "42,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Jio"
+    ],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "support_telecom_call_07": {
+    "objections": [
+      "app crashing during payment gateway sync"
+    ],
+    "pricing_mentions": [
+      "23,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "support_telecom_call_08": {
+    "objections": [
+      "app crashing during payment gateway sync"
+    ],
+    "pricing_mentions": [
+      "77,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "support_telecom_call_09": {
+    "objections": [
+      "unexpected overage charges on bill"
+    ],
+    "pricing_mentions": [
+      "65,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "ecommerce_retail_call_01": {
+    "objections": [
+      "uncertainty about true-to-size fit"
+    ],
+    "pricing_mentions": [
+      "28,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Nike"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_02": {
+    "objections": [
+      "uncertainty about true-to-size fit"
+    ],
+    "pricing_mentions": [
+      "18,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_03": {
+    "objections": [
+      "uncertainty about true-to-size fit"
+    ],
+    "pricing_mentions": [
+      "46,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_04": {
+    "objections": [
+      "uncertainty about true-to-size fit"
+    ],
+    "pricing_mentions": [
+      "81,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Ordinary"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_05": {
+    "objections": [
+      "worried about return shipping costs"
+    ],
+    "pricing_mentions": [
+      "71,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Nike"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_06": {
+    "objections": [
+      "worried about return shipping costs"
+    ],
+    "pricing_mentions": [
+      "73,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Ordinary"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_07": {
+    "objections": [
+      "worried about return shipping costs"
+    ],
+    "pricing_mentions": [
+      "44,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "ecommerce_retail_call_08": {
+    "objections": [
+      "coupon code expired at checkout"
+    ],
+    "pricing_mentions": [
+      "58,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Ordinary"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "ecommerce_retail_call_09": {
+    "objections": [
+      "worried about return shipping costs"
+    ],
+    "pricing_mentions": [
+      "84,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "auto_motors_call_01": {
+    "objections": [
+      "demands higher trade-in valuation for old vehicle"
+    ],
+    "pricing_mentions": [
+      "58,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "none, prospect passed on offer"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "budget and timing misalignment resulted in deal not moving forward"
+    }
+  },
+  "auto_motors_call_02": {
+    "objections": [
+      "demands higher trade-in valuation for old vehicle"
+    ],
+    "pricing_mentions": [
+      "50,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "auto_motors_call_03": {
+    "objections": [
+      "demands higher trade-in valuation for old vehicle"
+    ],
+    "pricing_mentions": [
+      "82,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "auto_motors_call_04": {
+    "objections": [
+      "range anxiety and fast-charging availability"
+    ],
+    "pricing_mentions": [
+      "16,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "auto_motors_call_05": {
+    "objections": [
+      "demands higher trade-in valuation for old vehicle"
+    ],
+    "pricing_mentions": [
+      "27,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "auto_motors_call_06": {
+    "objections": [
+      "price negotiation against competitor quotation"
+    ],
+    "pricing_mentions": [
+      "73,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "auto_motors_call_07": {
+    "objections": [
+      "range anxiety and fast-charging availability"
+    ],
+    "pricing_mentions": [
+      "77,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "auto_motors_call_08": {
+    "objections": [
+      "demands higher trade-in valuation for old vehicle"
+    ],
+    "pricing_mentions": [
+      "54,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Honda"
+    ],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "auto_motors_call_09": {
+    "objections": [
+      "range anxiety and fast-charging availability"
+    ],
+    "pricing_mentions": [
+      "82,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Hyundai"
+    ],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "realty_properties_call_01": {
+    "objections": [
+      "price is above current budget ceiling"
+    ],
+    "pricing_mentions": [
+      "32,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "realty_properties_call_02": {
+    "objections": [
+      "needs to inspect property with family elder"
+    ],
+    "pricing_mentions": [
+      "51,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Direct Builder Sales"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "realty_properties_call_03": {
+    "objections": [
+      "worried about location connectivity and road width"
+    ],
+    "pricing_mentions": [
+      "42,000 rupees"
+    ],
+    "competitor_mentions": [
+      "MagicBricks"
+    ],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "realty_properties_call_04": {
+    "objections": [
+      "needs to inspect property with family elder"
+    ],
+    "pricing_mentions": [
+      "63,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "realty_properties_call_05": {
+    "objections": [
+      "worried about location connectivity and road width"
+    ],
+    "pricing_mentions": [
+      "18,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "realty_properties_call_06": {
+    "objections": [
+      "price is above current budget ceiling"
+    ],
+    "pricing_mentions": [
+      "50,000 rupees"
+    ],
+    "competitor_mentions": [
+      "MagicBricks"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "realty_properties_call_07": {
+    "objections": [
+      "needs to inspect property with family elder"
+    ],
+    "pricing_mentions": [
+      "74,000 rupees"
+    ],
+    "competitor_mentions": [
+      "MagicBricks"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "realty_properties_call_08": {
+    "objections": [
+      "price is above current budget ceiling"
+    ],
+    "pricing_mentions": [
+      "80,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "realty_properties_call_09": {
+    "objections": [
+      "needs to inspect property with family elder"
+    ],
+    "pricing_mentions": [
+      "51,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "insurance_policy_call_01": {
+    "objections": [
+      "worried about hospital cashless claim hassles"
+    ],
+    "pricing_mentions": [
+      "84,000 rupees"
+    ],
+    "competitor_mentions": [
+      "HDFC Life"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "insurance_policy_call_02": {
+    "objections": [
+      "worried about hospital cashless claim hassles"
+    ],
+    "pricing_mentions": [
+      "85,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "insurance_policy_call_03": {
+    "objections": [
+      "worried about hospital cashless claim hassles"
+    ],
+    "pricing_mentions": [
+      "85,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "insurance_policy_call_04": {
+    "objections": [
+      "hesitant on annual premium commitment"
+    ],
+    "pricing_mentions": [
+      "22,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "insurance_policy_call_05": {
+    "objections": [
+      "hesitant on annual premium commitment"
+    ],
+    "pricing_mentions": [
+      "57,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "insurance_policy_call_06": {
+    "objections": [
+      "confused about room rent capping deductions"
+    ],
+    "pricing_mentions": [
+      "21,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "insurance_policy_call_07": {
+    "objections": [
+      "hesitant on annual premium commitment"
+    ],
+    "pricing_mentions": [
+      "39,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "insurance_policy_call_08": {
+    "objections": [
+      "hesitant on annual premium commitment"
+    ],
+    "pricing_mentions": [
+      "79,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "insurance_policy_call_09": {
+    "objections": [
+      "hesitant on annual premium commitment"
+    ],
+    "pricing_mentions": [
+      "43,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "am_renewal_call_01": {
+    "objections": [
+      "unhappy with a recent patch regression outage"
+    ],
+    "pricing_mentions": [
+      "44,000 rupees"
+    ],
+    "competitor_mentions": [
+      "CloudSentry"
+    ],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "am_renewal_call_02": {
+    "objections": [
+      "unhappy with a recent patch regression outage"
+    ],
+    "pricing_mentions": [
+      "77,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "am_renewal_call_03": {
+    "objections": [
+      "mandatory departmental software budget freeze"
+    ],
+    "pricing_mentions": [
+      "25,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Asana"
+    ],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "am_renewal_call_04": {
+    "objections": [
+      "inherited account after champion left company"
+    ],
+    "pricing_mentions": [
+      "69,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "am_renewal_call_05": {
+    "objections": [
+      "inherited account after champion left company"
+    ],
+    "pricing_mentions": [
+      "22,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "am_renewal_call_06": {
+    "objections": [
+      "mandatory departmental software budget freeze"
+    ],
+    "pricing_mentions": [
+      "30,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "activation link sent, customer agreed to immediate signup"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer committed to transaction with clear budget and need"
+    }
+  },
+  "am_renewal_call_07": {
+    "objections": [
+      "inherited account after champion left company"
+    ],
+    "pricing_mentions": [
+      "53,000 rupees"
+    ],
+    "competitor_mentions": [
+      "CloudSentry"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "am_renewal_call_08": {
+    "objections": [
+      "inherited account after champion left company"
+    ],
+    "pricing_mentions": [
+      "47,000 rupees"
+    ],
+    "competitor_mentions": [
+      "PowerBI"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "am_renewal_call_09": {
+    "objections": [
+      "mandatory departmental software budget freeze"
+    ],
+    "pricing_mentions": [
+      "20,000 rupees"
+    ],
+    "competitor_mentions": [
+      "CloudSentry"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_01": {
+    "objections": [
+      "base compensation lower than market hike expectation"
+    ],
+    "pricing_mentions": [
+      "22,000 rupees"
+    ],
+    "competitor_mentions": [
+      "External Agency"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_02": {
+    "objections": [
+      "base compensation lower than market hike expectation"
+    ],
+    "pricing_mentions": [
+      "41,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "talent_hiring_call_03": {
+    "objections": [
+      "base compensation lower than market hike expectation"
+    ],
+    "pricing_mentions": [
+      "33,000 rupees"
+    ],
+    "competitor_mentions": [
+      "External Agency"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_04": {
+    "objections": [
+      "candidate holding a competing written offer"
+    ],
+    "pricing_mentions": [
+      "36,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_05": {
+    "objections": [
+      "base compensation lower than market hike expectation"
+    ],
+    "pricing_mentions": [
+      "34,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_06": {
+    "objections": [
+      "candidate holding a competing written offer"
+    ],
+    "pricing_mentions": [
+      "49,000 rupees"
+    ],
+    "competitor_mentions": [
+      "Direct Inhouse Recruiting"
+    ],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
+    }
+  },
+  "talent_hiring_call_07": {
+    "objections": [
+      "hesitation about short-notice city relocation"
+    ],
+    "pricing_mentions": [
+      "34,000 rupees"
+    ],
+    "competitor_mentions": [
+      "External Agency"
+    ],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_08": {
+    "objections": [
+      "base compensation lower than market hike expectation"
+    ],
+    "pricing_mentions": [
+      "20,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "prospect to review proposal with internal stakeholders"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "internal authority review required before final sign-off"
+    }
+  },
+  "talent_hiring_call_09": {
+    "objections": [
+      "candidate holding a competing written offer"
+    ],
+    "pricing_mentions": [
+      "35,000 rupees"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "calendar invite sent for follow-up session next Tuesday at 11 AM"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "timeline and next action clearly agreed upon"
     }
   }
 }

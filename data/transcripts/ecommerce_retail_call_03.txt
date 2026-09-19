@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Rohit, Riya here regarding your inquiry on ErgoDesk Pro. How are you doing today?
+[00:04] Customer: Hi Riya. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:09] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:15] Customer: Well, honestly, my primary hesitation is that we are uncertainty about true-to-size fit.
+[00:21] Rep: That's an entirely valid hesitation. Many of our clients bring up that exact concern during their initial review.
+[00:27] Customer: Right, so we just want to ensure we don't run into friction down the road.
+[00:31] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 46,000 rupees.
+[00:38] Customer: Okay, 46,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:46] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[00:57] Customer: That definitely removes a lot of the risk we were worried about.
+[01:01] Rep: Take the time you need to review the proposal with your team.
+[01:06] Customer: Thanks, I'll go through the numbers internally and touch base when we are ready.
+[01:10] Rep: Sounds like a plan, Rohit. Have a great rest of your day!

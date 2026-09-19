@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Manoj, Kavita here regarding your inquiry on Tech Headhunting. How are you doing today?
+[00:04] Customer: Hi Kavita. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:12] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:18] Customer: Well, honestly, my primary hesitation is that we are base compensation lower than market hike expectation.
+[00:24] Rep: That's an entirely valid hesitation. Many of our clients bring up that exact concern during their initial review.
+[00:30] Customer: Right, so we just want to ensure we don't run into friction down the road.
+[00:34] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 34,000 rupees.
+[00:44] Customer: Okay, 34,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:53] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:02] Customer: That definitely removes a lot of the risk we were worried about.
+[01:08] Rep: Take the time you need to review the proposal with your team.
+[01:15] Customer: Thanks, I'll go through the numbers internally and touch base when we are ready.
+[01:20] Rep: Sounds like a plan, Manoj. Have a great rest of your day!

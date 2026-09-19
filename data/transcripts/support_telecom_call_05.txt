@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Suresh, Sana here regarding your inquiry on SwiftFiber Broadband. How are you doing today?
+[00:07] Customer: Hi Sana. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:14] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:20] Customer: Well, honestly, my primary hesitation is that we are unexpected overage charges on bill.
+[00:26] Rep: That's an entirely valid hesitation. Many of our clients bring up that exact concern during their initial review.
+[00:32] Customer: Right, so we just want to ensure we don't run into friction down the road.
+[00:40] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 75,000 rupees.
+[00:49] Customer: Okay, 75,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:57] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:08] Customer: That definitely removes a lot of the risk we were worried about.
+[01:12] Rep: Is there any specific modification to the tier that would make this viable for your current cycle?
+[01:17] Customer: At this point we've decided to hold off and stick with our existing setup. We will pass for now.
+[01:23] Rep: Completely respect that decision. Thank you for your time today, Suresh.

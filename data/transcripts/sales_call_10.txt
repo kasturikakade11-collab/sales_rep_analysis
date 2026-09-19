@@ -1,0 +1,14 @@
+[00:00] Rep: Hi Priya, thanks for joining today. I'd like to understand how your team handles sales reporting and see whether our platform could help.
+[00:18] Customer: Sure. We currently pull reports manually from three systems, and it takes the team several hours every week.
+[00:35] Rep: That's quite a lot of manual work. What would you ideally like to improve?
+[00:43] Customer: Mainly faster reporting and one place for dashboards. Our managers also want better visibility into the pipeline.
+[01:05] Rep: That matches what our reporting module is designed for. How large is the team that would use it?
+[01:14] Customer: Around 35 people initially.
+[01:24] Rep: And have you set aside a budget for a reporting solution?
+[01:32] Customer: We have about $18,000 allocated for the first year.
+[01:43] Rep: Good to know. Who besides you would be involved in the final decision?
+[01:52] Customer: Our VP of Sales signs off, and I would lead the evaluation.
+[02:03] Rep: What timeline are you working toward?
+[02:11] Customer: We want the new reporting system running by the beginning of November.
+[02:21] Rep: Great. I'll send a proposal for 35 seats tomorrow, and we can review it with your VP next week.
+[02:29] Customer: That works for me.

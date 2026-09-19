@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Sonal, Alok here regarding your inquiry on TaskFlow Enterprise. How are you doing today?
+[00:06] Customer: Hi Alok. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:14] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:20] Customer: Well, honestly, my primary hesitation is that we are unhappy with a recent patch regression outage.
+[00:25] Rep: Completely understand that concern. Are you currently comparing our package with CloudSentry?
+[00:31] Customer: Yes, exactly. We had evaluated CloudSentry earlier, so we're trying to figure out which approach makes the most sense.
+[00:38] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 44,000 rupees.
+[00:48] Customer: Okay, 44,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:55] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:03] Customer: That definitely removes a lot of the risk we were worried about.
+[01:10] Rep: If you're comfortable with the terms, I can share the confirmation link and activate your tier today.
+[01:16] Customer: Yes, let's proceed and lock this in right now.
+[01:21] Rep: Wonderful! Generating the secure agreement now. Welcome aboard, {prospect}!

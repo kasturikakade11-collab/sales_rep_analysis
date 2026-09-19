@@ -1,0 +1,16 @@
+[00:00] Rep: Thanks for taking the call, Daniel. What prompted you to look at customer-support software?
+[00:15] Customer: Our response times are getting worse, especially during product launches.
+[00:25] Rep: How are you managing support today?
+[00:33] Customer: Mostly email and spreadsheets. We also use Zendesk for a small part of the team.
+[00:44] Rep: Understood. What is the biggest problem with the current process?
+[00:52] Customer: Tickets get lost, and managers don't have a clear view of unresolved issues.
+[01:03] Rep: Our platform centralizes tickets and gives managers a live queue.
+[01:12] Customer: It looks useful, but the price is higher than what we pay for our current setup.
+[01:22] Rep: Would a lower-cost package solve the issue?
+[01:29] Customer: Possibly, but I need to understand the total annual cost first.
+[01:39] Rep: Who would approve the purchase?
+[01:47] Customer: I'm not sure. Procurement and our support director may both be involved.
+[01:57] Rep: When would you like to make a decision?
+[02:05] Customer: Ideally this quarter, but there isn't a fixed date.
+[02:15] Rep: I'll send two pricing options and a comparison with your current setup.
+[02:22] Customer: Okay, please do.

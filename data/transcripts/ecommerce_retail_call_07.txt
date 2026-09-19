@@ -1,0 +1,13 @@
+[00:00] Rep: Hi Tanya, Nisha here regarding your inquiry on StreetGlide Sneakers. How are you doing today?
+[00:06] Customer: Hi Nisha. Doing alright, thanks for checking in. Just had a few questions about the details.
+[00:14] Rep: Happy to help clear those up. What specific parts of the setup were you looking at?
+[00:20] Customer: Well, honestly, my primary hesitation is that we are worried about return shipping costs.
+[00:28] Rep: That's an entirely valid hesitation. Many of our clients bring up that exact concern during their initial review.
+[00:36] Customer: Right, so we just want to ensure we don't run into friction down the road.
+[00:40] Rep: To ensure smooth adoption, our current tier includes guided onboarding and direct SLA support, locked in around 44,000 rupees.
+[00:47] Customer: Okay, 44,000 rupees is within range, but how does your team manage turnaround times when issues arise?
+[00:55] Rep: We maintain a guaranteed 45-minute response window with an assigned technical manager, so your team is never waiting on generic ticket queues.
+[01:04] Customer: That definitely removes a lot of the risk we were worried about.
+[01:10] Rep: If you're comfortable with the terms, I can share the confirmation link and activate your tier today.
+[01:16] Customer: Yes, let's proceed and lock this in right now.
+[01:22] Rep: Wonderful! Generating the secure agreement now. Welcome aboard, {prospect}!

@@ -1,0 +1,18 @@
+[00:00] Rep: I'd like to learn about your reconciliation process, Arjun.
+[00:12] Customer: We reconcile transactions manually at the end of each day.
+[00:20] Rep: How much time does that take?
+[00:27] Customer: Two analysts spend about three hours every day on it.
+[00:35] Rep: What would you like to automate?
+[00:42] Customer: Matching transactions and identifying exceptions.
+[00:50] Rep: That is exactly where our automation helps.
+[00:58] Customer: It sounds useful, but I need to see how accurate the matching is.
+[01:08] Rep: We can run a sample using your historical data.
+[01:15] Customer: That would be helpful.
+[01:18] Rep: Have you allocated a budget?
+[01:25] Customer: We can spend up to $25,000 this year.
+[01:33] Rep: Who approves the purchase?
+[01:40] Customer: I can recommend it, but our CFO signs off.
+[01:47] Rep: When would you want to start?
+[01:54] Customer: Within the next eight weeks.
+[02:02] Rep: I'll send the sample-data checklist and schedule a validation session for Wednesday.
+[02:10] Customer: Sounds good.

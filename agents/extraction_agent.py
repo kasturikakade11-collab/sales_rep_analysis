@@ -6,38 +6,20 @@ from .llm_client import client, MODEL_NAME
 
 
 class Moment(BaseModel):
-
-    timestamp: str = Field(
-        description="Timestamp of the moment."
-    )
-
-    speaker: Literal[
-        "REP",
-        "CUSTOMER"
-    ]
-
-    category: str = Field(
+    timestamp: str = Field(description="Timestamp of the moment.")
+    speaker: Literal["REP", "CUSTOMER"]
+    categories: List[str] = Field(
         description=(
-            "Category such as pain_point, "
-            "objection, pricing, competitor, "
-            "buying_signal, hesitation, "
-            "budget, authority, need, timeline, "
-            "next_step, unanswered_question."
+            "One or more categories that apply, from: pain_point, "
+            "objection, pricing, competitor, buying_signal, hesitation, "
+            "budget, authority, need, timeline, next_step, "
+            "unanswered_question. A single moment can have more than one "
+            "category — e.g. a sentence with both a price and a future "
+            "commitment must include both 'pricing' and 'next_step'."
         )
     )
-
-    evidence: str = Field(
-        description=(
-            "Evidence directly supported by "
-            "the transcript."
-        )
-    )
-
-    status: Literal[
-        "resolved",
-        "unresolved",
-        "neutral"
-    ]
+    evidence: str = Field(description="Evidence directly supported by the transcript.")
+    status: Literal["resolved", "unresolved", "neutral"]
 
 
 class ExtractionResult(BaseModel):
@@ -64,6 +46,12 @@ Extract:
 10. Timeline information
 11. Next-step commitments
 12. Unanswered questions
+
+IMPORTANT: A moment can belong to MORE THAN ONE category. If a sentence
+contains a number, price, or amount, it MUST include "pricing" in its
+categories. If a sentence contains a concrete future commitment (a date,
+"I'll send X", "let's hold Y"), it MUST include "next_step" in its
+categories. Always list every category that genuinely applies, not just one.
 
 Rules:
 
@@ -101,7 +89,8 @@ Extract the important moments.
         contents=prompt,
         config={
             "response_mime_type": "application/json",
-            "response_schema": ExtractionResult
+            "response_schema": ExtractionResult,
+            "temperature": 0
         }
     )
 

@@ -1,0 +1,16 @@
+[00:00] Rep: What are you hoping to improve in your patient follow-up process, Kavya?
+[00:12] Customer: Our staff manually call patients after visits, so follow-ups are inconsistent.
+[00:21] Rep: What would a better process look like?
+[00:28] Customer: Automated reminders and a list of patients who still need follow-up.
+[00:37] Rep: How many users would need access?
+[00:44] Customer: Around 12.
+[00:51] Rep: Have you evaluated another vendor?
+[00:58] Customer: No, you're the first one we've spoken with.
+[01:05] Rep: Do you have a budget?
+[01:12] Customer: We can allocate $8,000 for the first year.
+[01:19] Rep: Who is the decision maker?
+[01:26] Customer: Our practice manager will approve it.
+[01:33] Rep: When would you like to go live?
+[01:40] Customer: Within six weeks.
+[01:47] Rep: I'll send the agreement today and schedule onboarding for next Tuesday.
+[01:54] Customer: Great. We are ready to move forward.

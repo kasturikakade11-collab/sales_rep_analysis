@@ -1,0 +1,18 @@
+[00:00] Rep: Thanks, Mark. I understand your team is considering automation for lead routing.
+[00:12] Customer: Yes. Leads sometimes wait a day before someone contacts them.
+[00:20] Rep: How are leads assigned today?
+[00:28] Customer: A coordinator checks a shared spreadsheet and assigns them manually.
+[00:38] Rep: What would success look like?
+[00:45] Customer: Leads should reach the right rep within a few minutes.
+[00:54] Rep: We can automate that based on territory and product interest.
+[01:02] Customer: That sounds good. My only concern is whether our reps will actually use it.
+[01:12] Rep: We can include onboarding and usage reports.
+[01:20] Customer: Okay.
+[01:23] Rep: Do you have an approved budget?
+[01:30] Customer: We have a budget of $12,000 for this project.
+[01:38] Rep: Who owns the final approval?
+[01:45] Customer: I do, together with our sales operations manager.
+[01:52] Rep: When do you want to launch?
+[02:00] Customer: By October 15 if possible.
+[02:08] Rep: I'll send the implementation plan today and schedule a stakeholder review for Monday.
+[02:16] Customer: Perfect.

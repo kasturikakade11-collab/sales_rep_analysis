@@ -1,0 +1,16 @@
+[00:00] Rep: Thanks, Sofia. What are you looking for in a claims analytics platform?
+[00:12] Customer: We want better fraud indicators and faster reporting.
+[00:21] Rep: Which teams would use the platform?
+[00:28] Customer: Claims and compliance, around 25 people.
+[00:36] Rep: Have you seen any alternatives?
+[00:43] Customer: We have spoken with SAS as well.
+[00:50] Rep: What matters most in the evaluation?
+[00:58] Customer: Accuracy and integration with our existing claims system.
+[01:07] Rep: Is there a budget range?
+[01:14] Customer: We have an approved range of $40,000 to $50,000 annually.
+[01:23] Rep: Who is the final decision maker?
+[01:31] Customer: Our head of analytics makes the recommendation and the CIO approves.
+[01:40] Rep: What is your implementation timeline?
+[01:47] Customer: We want to select a vendor within two months.
+[01:56] Rep: I'll arrange an integration workshop with our technical team.
+[02:04] Customer: Good. Please invite our IT architect too.

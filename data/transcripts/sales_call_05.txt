@@ -1,0 +1,16 @@
+[00:00] Rep: What challenges are you seeing with your claims workflow, Ravi?
+[00:14] Customer: Claims take too long because documents arrive through email and staff enter the details manually.
+[00:24] Rep: So reducing manual entry is a priority?
+[00:31] Customer: Yes, and we need better tracking of pending claims.
+[00:40] Rep: Our system can capture documents and route claims automatically.
+[00:48] Customer: We like the workflow, but the implementation fee seems expensive.
+[00:57] Rep: What implementation budget were you expecting?
+[01:04] Customer: We expected to spend no more than $10,000 on implementation.
+[01:14] Rep: Our estimate is closer to $16,000.
+[01:21] Customer: That's a problem. We'd need an exception from finance.
+[01:30] Rep: Who can approve that exception?
+[01:36] Customer: Our finance director.
+[01:42] Rep: When do you need the new workflow?
+[01:49] Customer: Before the next claims season in six months.
+[01:58] Rep: I'll prepare a lower-scope implementation option for Friday.
+[02:06] Customer: Yes, let's review that.

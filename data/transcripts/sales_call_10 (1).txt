@@ -1,0 +1,16 @@
+[00:00] Rep: Good morning, Aisha. What are you hoping to improve with a CRM?
+[00:14] Customer: Our sales team needs better follow-up. Leads are sitting in spreadsheets and some are forgotten.
+[00:27] Rep: How many people would use the CRM?
+[00:34] Customer: About 20 sales reps.
+[00:42] Rep: Have you looked at any other products?
+[00:49] Customer: Yes, we're comparing you with Salesforce and HubSpot.
+[00:58] Rep: What will be most important when you compare them?
+[01:06] Customer: Ease of use and reporting. We don't want another complicated system.
+[01:18] Rep: Do you already have a budget range?
+[01:25] Customer: Not yet. Finance hasn't approved one.
+[01:34] Rep: Who will make the final decision?
+[01:41] Customer: Our sales director will recommend it, but the CFO has final approval.
+[01:50] Rep: And when would you want the system in place?
+[01:58] Customer: We haven't decided. We're still in the research stage.
+[02:08] Rep: I'll send a comparison guide and set up a technical demo for next Thursday.
+[02:16] Customer: Yes, that would help.
