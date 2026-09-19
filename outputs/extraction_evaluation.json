@@ -1,0 +1,2050 @@
+{
+  "evaluation_summary": {
+    "number_of_calls": 12,
+    "categories": [
+      "objections",
+      "pricing_mentions",
+      "competitor_mentions",
+      "next_steps"
+    ],
+    "matching_method": {
+      "objections": "controlled semantic concept matching + lexical similarity with multi-category objection candidate detection",
+      "pricing_mentions": "numerical + lexical matching",
+      "competitor_mentions": "entity/token + lexical matching",
+      "next_steps": "action + temporal + lexical matching",
+      "one_to_one_matching": true
+    },
+    "category_performance": {
+      "objections": {
+        "true_positives": 14,
+        "false_positives": 10,
+        "false_negatives": 0,
+        "precision": 0.583,
+        "recall": 1.0,
+        "f1": 0.737
+      },
+      "pricing_mentions": {
+        "true_positives": 4,
+        "false_positives": 7,
+        "false_negatives": 9,
+        "precision": 0.364,
+        "recall": 0.308,
+        "f1": 0.333
+      },
+      "competitor_mentions": {
+        "true_positives": 7,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "next_steps": {
+        "true_positives": 8,
+        "false_positives": 4,
+        "false_negatives": 10,
+        "precision": 0.667,
+        "recall": 0.444,
+        "f1": 0.533
+      }
+    },
+    "overall": {
+      "true_positives": 33,
+      "false_positives": 21,
+      "false_negatives": 19,
+      "precision": 0.611,
+      "recall": 0.635,
+      "f1": 0.623
+    }
+  },
+  "per_call_results": [
+    {
+      "call_id": "saas_001",
+      "predictions": [
+        {
+          "timestamp": "00:08",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "Good, we've narrowed it down to you and HubSpot actually.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:18",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "Mainly their pricing tier feels more predictable for our size.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:25",
+          "speaker": "REP",
+          "category": "pricing",
+          "evidence": "Our starter plan is $499/month for up to 10 seats — how does that compare?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:33",
+          "speaker": "CUSTOMER",
+          "category": "timeline",
+          "evidence": "My concern is really the onboarding time — we need this live in 3 weeks.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:52",
+          "speaker": "CUSTOMER",
+          "category": "budget",
+          "evidence": "I'll need to loop in our CFO for budget sign-off, but I already have approval up to $600/month.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:52",
+          "speaker": "CUSTOMER",
+          "category": "authority",
+          "evidence": "I'll need to loop in our CFO for budget sign-off",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "01:14",
+          "speaker": "CUSTOMER",
+          "category": "next_step",
+          "evidence": "Yes, let's do that. Thursday at 2pm works.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "pricing comparison to HubSpot",
+            "onboarding/implementation timeline concern"
+          ],
+          "predictions": [
+            "Our starter plan is $499/month for up to 10 seats — how does that compare?",
+            "My concern is really the onboarding time — we need this live in 3 weeks.",
+            "I'll need to loop in our CFO for budget sign-off, but I already have approval up to $600/month.",
+            "I'll need to loop in our CFO for budget sign-off"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:25",
+              "speaker": "REP",
+              "category": "pricing",
+              "evidence": "Our starter plan is $499/month for up to 10 seats — how does that compare?",
+              "status": "resolved"
+            },
+            {
+              "timestamp": "00:33",
+              "speaker": "CUSTOMER",
+              "category": "timeline",
+              "evidence": "My concern is really the onboarding time — we need this live in 3 weeks.",
+              "status": "resolved"
+            },
+            {
+              "timestamp": "00:52",
+              "speaker": "CUSTOMER",
+              "category": "budget",
+              "evidence": "I'll need to loop in our CFO for budget sign-off, but I already have approval up to $600/month.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:52",
+              "speaker": "CUSTOMER",
+              "category": "authority",
+              "evidence": "I'll need to loop in our CFO for budget sign-off",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 3,
+              "ground_truth": "pricing comparison to HubSpot",
+              "prediction": "I'll need to loop in our CFO for budget sign-off",
+              "prediction_category": "authority",
+              "score": 0.85
+            },
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "onboarding/implementation timeline concern",
+              "prediction": "Our starter plan is $499/month for up to 10 seats — how does that compare?",
+              "prediction_category": "pricing",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 2,
+          "false_positives": 2,
+          "false_negatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "$499/month for up to 10 seats"
+          ],
+          "predictions": [
+            "Mainly their pricing tier feels more predictable for our size.",
+            "Our starter plan is $499/month for up to 10 seats — how does that compare?"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:18",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Mainly their pricing tier feels more predictable for our size.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:25",
+              "speaker": "REP",
+              "category": "pricing",
+              "evidence": "Our starter plan is $499/month for up to 10 seats — how does that compare?",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 1,
+              "ground_truth": "$499/month for up to 10 seats",
+              "prediction": "Our starter plan is $499/month for up to 10 seats — how does that compare?",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "HubSpot"
+          ],
+          "predictions": [
+            "Good, we've narrowed it down to you and HubSpot actually."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:08",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "Good, we've narrowed it down to you and HubSpot actually.",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "HubSpot",
+              "prediction": "Good, we've narrowed it down to you and HubSpot actually.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "send one-pager and pricing sheet",
+            "follow-up call next Thursday at 2pm"
+          ],
+          "predictions": [
+            "Yes, let's do that. Thursday at 2pm works."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "01:14",
+              "speaker": "CUSTOMER",
+              "category": "next_step",
+              "evidence": "Yes, let's do that. Thursday at 2pm works.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "follow-up call next Thursday at 2pm",
+              "prediction": "Yes, let's do that. Thursday at 2pm works.",
+              "score": 0.5405
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        }
+      }
+    },
+    {
+      "call_id": "saas_002",
+      "predictions": [
+        {
+          "timestamp": "00:07",
+          "speaker": "CUSTOMER",
+          "category": "authority",
+          "evidence": "I'm not the one who signs off on new tools.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:24",
+          "speaker": "CUSTOMER",
+          "category": "authority",
+          "evidence": "Not totally sure yet, it might go through procurement or might go through my director. We haven't figured that out.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:44",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "It's fine I think, but again I can't really confirm anything on budget right now.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:44",
+          "speaker": "CUSTOMER",
+          "category": "budget",
+          "evidence": "I can't really confirm anything on budget right now.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:59",
+          "speaker": "CUSTOMER",
+          "category": "timeline",
+          "evidence": "Not really, it's more of a 'sometime this year' thing right now.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "01:14",
+          "speaker": "CUSTOMER",
+          "category": "next_step",
+          "evidence": "Yeah, that would help. Send it over and I'll try to get back to you.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "unclear decision-maker / approval process"
+          ],
+          "predictions": [
+            "I'm not the one who signs off on new tools.",
+            "Not totally sure yet, it might go through procurement or might go through my director. We haven't figured that out.",
+            "It's fine I think, but again I can't really confirm anything on budget right now.",
+            "I can't really confirm anything on budget right now."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:07",
+              "speaker": "CUSTOMER",
+              "category": "authority",
+              "evidence": "I'm not the one who signs off on new tools.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:24",
+              "speaker": "CUSTOMER",
+              "category": "authority",
+              "evidence": "Not totally sure yet, it might go through procurement or might go through my director. We haven't figured that out.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:44",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "It's fine I think, but again I can't really confirm anything on budget right now.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:44",
+              "speaker": "CUSTOMER",
+              "category": "budget",
+              "evidence": "I can't really confirm anything on budget right now.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "unclear decision-maker / approval process",
+              "prediction": "I'm not the one who signs off on new tools.",
+              "prediction_category": "authority",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 3,
+          "false_negatives": 0,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "$1,200/month plan (previously discussed)"
+          ],
+          "predictions": [
+            "It's fine I think, but again I can't really confirm anything on budget right now."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:44",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "It's fine I think, but again I can't really confirm anything on budget right now.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to send internal forwarding material; customer to try to identify stakeholder"
+          ],
+          "predictions": [
+            "Yeah, that would help. Send it over and I'll try to get back to you."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "01:14",
+              "speaker": "CUSTOMER",
+              "category": "next_step",
+              "evidence": "Yeah, that would help. Send it over and I'll try to get back to you.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "rep to send internal forwarding material; customer to try to identify stakeholder",
+              "prediction": "Yeah, that would help. Send it over and I'll try to get back to you.",
+              "score": 0.6667
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    {
+      "call_id": "saas_003",
+      "predictions": [
+        {
+          "timestamp": "00:18",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:33",
+          "speaker": "CUSTOMER",
+          "category": "hesitation",
+          "evidence": "Not really a gap, more just... I don't know, I need to think about it more.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:48",
+          "speaker": "CUSTOMER",
+          "category": "timeline",
+          "evidence": "Probably more about timing honestly, maybe check in with me in a month?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:56",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "Sure, I'll follow up in four weeks. In the meantime I'll send a couple of case studies from similar teams.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "general hesitation / not ready to decide",
+            "comparing against Salesforce module"
+          ],
+          "predictions": [
+            "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.",
+            "Not really a gap, more just... I don't know, I need to think about it more."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:18",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:33",
+              "speaker": "CUSTOMER",
+              "category": "hesitation",
+              "evidence": "Not really a gap, more just... I don't know, I need to think about it more.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 1,
+              "ground_truth": "general hesitation / not ready to decide",
+              "prediction": "Not really a gap, more just... I don't know, I need to think about it more.",
+              "prediction_category": "hesitation",
+              "score": 0.85
+            },
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "comparing against Salesforce module",
+              "prediction": "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.",
+              "prediction_category": "competitor",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 2,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "pricing_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "Salesforce"
+          ],
+          "predictions": [
+            "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:18",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "Salesforce",
+              "prediction": "I guess we're also just taking a look at Salesforce's new sales module, so comparing a bit.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to send case studies",
+            "follow-up check-in in four weeks"
+          ],
+          "predictions": [
+            "Sure, I'll follow up in four weeks. In the meantime I'll send a couple of case studies from similar teams."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:56",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "Sure, I'll follow up in four weeks. In the meantime I'll send a couple of case studies from similar teams.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "follow-up check-in in four weeks",
+              "prediction": "Sure, I'll follow up in four weeks. In the meantime I'll send a couple of case studies from similar teams.",
+              "score": 0.8333
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        }
+      }
+    },
+    {
+      "call_id": "saas_004",
+      "predictions": [
+        {
+          "timestamp": "00:06",
+          "speaker": "CUSTOMER",
+          "category": "need",
+          "evidence": "The reporting dashboard was a big hit.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:17",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:46",
+          "speaker": "CUSTOMER",
+          "category": "buying_signal",
+          "evidence": "No, I think we're ready.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:46",
+          "speaker": "CUSTOMER",
+          "category": "authority",
+          "evidence": "I can sign off on this myself up to $50k annually",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:46",
+          "speaker": "CUSTOMER",
+          "category": "timeline",
+          "evidence": "we want to be live before next quarter starts.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "01:00",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "I'll get the contract over by Friday and we can target a start date next week.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "per-seat pricing at scale"
+          ],
+          "predictions": [
+            "Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon.",
+            "we want to be live before next quarter starts."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:17",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon.",
+              "status": "resolved"
+            },
+            {
+              "timestamp": "00:46",
+              "speaker": "CUSTOMER",
+              "category": "timeline",
+              "evidence": "we want to be live before next quarter starts.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "per-seat pricing at scale",
+              "prediction": "Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon.",
+              "prediction_category": "pricing",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "$25/seat standard, $18/seat enterprise tier above 50 seats"
+          ],
+          "predictions": [
+            "Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:17",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Just the price per seat once we scale past 50 users — want to make sure it doesn't balloon.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to send contract by Friday",
+            "target start date next week"
+          ],
+          "predictions": [
+            "I'll get the contract over by Friday and we can target a start date next week."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "01:00",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "I'll get the contract over by Friday and we can target a start date next week.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "target start date next week",
+              "prediction": "I'll get the contract over by Friday and we can target a start date next week.",
+              "score": 0.5192
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        }
+      }
+    },
+    {
+      "call_id": "insurance_001",
+      "predictions": [
+        {
+          "timestamp": "00:00",
+          "speaker": "REP",
+          "category": "pricing",
+          "evidence": "family floater plan would run about ₹18,000/year for 5 lakh coverage",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:12",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:12",
+          "speaker": "CUSTOMER",
+          "category": "objection",
+          "evidence": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:43",
+          "speaker": "CUSTOMER",
+          "category": "budget",
+          "evidence": "Money's a bit tight this year.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:54",
+          "speaker": "CUSTOMER",
+          "category": "authority",
+          "evidence": "Let me think about it and discuss with my wife.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:54",
+          "speaker": "CUSTOMER",
+          "category": "hesitation",
+          "evidence": "Let me think about it and discuss with my wife.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "01:08",
+          "speaker": "CUSTOMER",
+          "category": "next_step",
+          "evidence": "Sure, Tuesday works.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "premium higher than competitor quote",
+            "budget constraints this year"
+          ],
+          "predictions": [
+            "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+            "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+            "Let me think about it and discuss with my wife.",
+            "Let me think about it and discuss with my wife."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:12",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+              "status": "neutral"
+            },
+            {
+              "timestamp": "00:12",
+              "speaker": "CUSTOMER",
+              "category": "objection",
+              "evidence": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:54",
+              "speaker": "CUSTOMER",
+              "category": "authority",
+              "evidence": "Let me think about it and discuss with my wife.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:54",
+              "speaker": "CUSTOMER",
+              "category": "hesitation",
+              "evidence": "Let me think about it and discuss with my wife.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "premium higher than competitor quote",
+              "prediction": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+              "prediction_category": "competitor",
+              "score": 0.85
+            },
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 1,
+              "ground_truth": "budget constraints this year",
+              "prediction": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+              "prediction_category": "objection",
+              "score": 0.75
+            }
+          ],
+          "true_positives": 2,
+          "false_positives": 2,
+          "false_negatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "₹18,000/year for 5 lakh coverage",
+            "₹11,500/year for 3 lakh coverage"
+          ],
+          "predictions": [
+            "family floater plan would run about ₹18,000/year for 5 lakh coverage"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:00",
+              "speaker": "REP",
+              "category": "pricing",
+              "evidence": "family floater plan would run about ₹18,000/year for 5 lakh coverage",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "₹18,000/year for 5 lakh coverage",
+              "prediction": "family floater plan would run about ₹18,000/year for 5 lakh coverage",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "ICICI Lombard"
+          ],
+          "predictions": [
+            "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:12",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "ICICI Lombard",
+              "prediction": "That's a bit more than what my current provider, ICICI Lombard, quoted me last renewal.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to call back Tuesday"
+          ],
+          "predictions": [
+            "Sure, Tuesday works."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "01:08",
+              "speaker": "CUSTOMER",
+              "category": "next_step",
+              "evidence": "Sure, Tuesday works.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    {
+      "call_id": "realestate_001",
+      "predictions": [
+        {
+          "timestamp": "00:05",
+          "speaker": "CUSTOMER",
+          "category": "pain_point",
+          "evidence": "it's a bit above our budget — it's listed at 85 lakh and we were hoping to stay under 75",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:05",
+          "speaker": "CUSTOMER",
+          "category": "budget",
+          "evidence": "it's listed at 85 lakh and we were hoping to stay under 75",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:32",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "We're also still keeping an eye on a listing from another agent in the same complex.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:32",
+          "speaker": "CUSTOMER",
+          "category": "buying_signal",
+          "evidence": "We'd be comfortable with that if they accept.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:53",
+          "speaker": "CUSTOMER",
+          "category": "timeline",
+          "evidence": "ideally within 6 weeks since our current lease ends then.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:59",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "I'll put in the 78 lakh offer today and update you by tomorrow evening.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "price above stated budget (85L vs 75L target)"
+          ],
+          "predictions": [
+            "it's a bit above our budget — it's listed at 85 lakh and we were hoping to stay under 75",
+            "it's listed at 85 lakh and we were hoping to stay under 75"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:05",
+              "speaker": "CUSTOMER",
+              "category": "pain_point",
+              "evidence": "it's a bit above our budget — it's listed at 85 lakh and we were hoping to stay under 75",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:05",
+              "speaker": "CUSTOMER",
+              "category": "budget",
+              "evidence": "it's listed at 85 lakh and we were hoping to stay under 75",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "price above stated budget (85L vs 75L target)",
+              "prediction": "it's a bit above our budget — it's listed at 85 lakh and we were hoping to stay under 75",
+              "prediction_category": "pain_point",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "listed at 85 lakh, offer to be floated at 78 lakh"
+          ],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "another agent's listing in the same complex"
+          ],
+          "predictions": [
+            "We're also still keeping an eye on a listing from another agent in the same complex."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:32",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "We're also still keeping an eye on a listing from another agent in the same complex.",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "another agent's listing in the same complex",
+              "prediction": "We're also still keeping an eye on a listing from another agent in the same complex.",
+              "score": 0.5238
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to submit 78 lakh offer today",
+            "update customer by tomorrow evening"
+          ],
+          "predictions": [
+            "I'll put in the 78 lakh offer today and update you by tomorrow evening."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:59",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "I'll put in the 78 lakh offer today and update you by tomorrow evening.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "update customer by tomorrow evening",
+              "prediction": "I'll put in the 78 lakh offer today and update you by tomorrow evening.",
+              "score": 0.875
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        }
+      }
+    },
+    {
+      "call_id": "automotive_001",
+      "predictions": [
+        {
+          "timestamp": "00:06",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "I'm also checking a similar model at a Honda dealership across town.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:21",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "Mostly price. They quoted a bit lower on the base variant.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:34",
+          "speaker": "CUSTOMER",
+          "category": "budget",
+          "evidence": "I haven't really landed on one yet honestly, just comparing options right now.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:54",
+          "speaker": "CUSTOMER",
+          "category": "next_step",
+          "evidence": "Sure, that works, I'll get back to you.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "price comparison to competitor dealership"
+          ],
+          "predictions": [
+            "I haven't really landed on one yet honestly, just comparing options right now."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:34",
+              "speaker": "CUSTOMER",
+              "category": "budget",
+              "evidence": "I haven't really landed on one yet honestly, just comparing options right now.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "price comparison to competitor dealership",
+              "prediction": "I haven't really landed on one yet honestly, just comparing options right now.",
+              "prediction_category": "budget",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "on-road price quote of ₹9.8 lakh"
+          ],
+          "predictions": [
+            "Mostly price. They quoted a bit lower on the base variant."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:21",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Mostly price. They quoted a bit lower on the base variant.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "Honda dealership across town"
+          ],
+          "predictions": [
+            "I'm also checking a similar model at a Honda dealership across town."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:06",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "I'm also checking a similar model at a Honda dealership across town.",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "Honda dealership across town",
+              "prediction": "I'm also checking a similar model at a Honda dealership across town.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to hold quote for one week"
+          ],
+          "predictions": [
+            "Sure, that works, I'll get back to you."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:54",
+              "speaker": "CUSTOMER",
+              "category": "next_step",
+              "evidence": "Sure, that works, I'll get back to you.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    {
+      "call_id": "ecommerce_001",
+      "predictions": [
+        {
+          "timestamp": "00:00",
+          "speaker": "CUSTOMER",
+          "category": "need",
+          "evidence": "Hi, is the wireless headphones set still in stock in black?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:05",
+          "speaker": "REP",
+          "category": "pricing",
+          "evidence": "Currently priced at ₹2,499, down from ₹3,199.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:12",
+          "speaker": "CUSTOMER",
+          "category": "unanswered_question",
+          "evidence": "Nice. Does it come with a warranty?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:20",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "Ok, do you have any ongoing discount codes?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:31",
+          "speaker": "CUSTOMER",
+          "category": "buying_signal",
+          "evidence": "Great, I'll place the order now then.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:36",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "Awesome, let me know if you need help at checkout!",
+          "status": "neutral"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "₹2,499 discounted from ₹3,199",
+            "extra 10% off with code WELCOME10"
+          ],
+          "predictions": [
+            "Currently priced at ₹2,499, down from ₹3,199.",
+            "Ok, do you have any ongoing discount codes?"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:05",
+              "speaker": "REP",
+              "category": "pricing",
+              "evidence": "Currently priced at ₹2,499, down from ₹3,199.",
+              "status": "resolved"
+            },
+            {
+              "timestamp": "00:20",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Ok, do you have any ongoing discount codes?",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "₹2,499 discounted from ₹3,199",
+              "prediction": "Currently priced at ₹2,499, down from ₹3,199.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5
+        },
+        "competitor_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "customer proceeding to checkout"
+          ],
+          "predictions": [
+            "Awesome, let me know if you need help at checkout!"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:36",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "Awesome, let me know if you need help at checkout!",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "customer proceeding to checkout",
+              "prediction": "Awesome, let me know if you need help at checkout!",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    {
+      "call_id": "retail_001",
+      "predictions": [
+        {
+          "timestamp": "00:05",
+          "speaker": "CUSTOMER",
+          "category": "need",
+          "evidence": "Yeah actually, do you have this jacket in a medium?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:16",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "Is it currently on any sale?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:30",
+          "speaker": "CUSTOMER",
+          "category": "buying_signal",
+          "evidence": "Nice, I'll take it.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:30",
+          "speaker": "CUSTOMER",
+          "category": "need",
+          "evidence": "Do you also have a matching scarf?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:45",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "Great, I'll ring both up for you at the counter.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "jacket 20% off at $64",
+            "scarf add-on at $15"
+          ],
+          "predictions": [
+            "Is it currently on any sale?"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:16",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Is it currently on any sale?",
+              "status": "resolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "proceeding to checkout with both items"
+          ],
+          "predictions": [
+            "Great, I'll ring both up for you at the counter."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:45",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "Great, I'll ring both up for you at the counter.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    {
+      "call_id": "customer_success_001",
+      "predictions": [
+        {
+          "timestamp": "00:10",
+          "speaker": "CUSTOMER",
+          "category": "pain_point",
+          "evidence": "Honestly, usage has dropped a lot on our end. A couple of the features we used most got deprecated.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:25",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "We've actually started testing Looker as a replacement for that piece.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:42",
+          "speaker": "CUSTOMER",
+          "category": "hesitation",
+          "evidence": "It might, but I'd need to see it working before committing to anything, and I don't have a lot of time before the renewal date to evaluate.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:56",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "let me get our product team to prioritize a demo of the fix this week, and we can push the renewal decision out by two weeks if needed.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "dropped usage due to deprecated reporting export feature",
+            "limited time to evaluate before renewal"
+          ],
+          "predictions": [
+            "Honestly, usage has dropped a lot on our end. A couple of the features we used most got deprecated.",
+            "It might, but I'd need to see it working before committing to anything, and I don't have a lot of time before the renewal date to evaluate."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:10",
+              "speaker": "CUSTOMER",
+              "category": "pain_point",
+              "evidence": "Honestly, usage has dropped a lot on our end. A couple of the features we used most got deprecated.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:42",
+              "speaker": "CUSTOMER",
+              "category": "hesitation",
+              "evidence": "It might, but I'd need to see it working before committing to anything, and I don't have a lot of time before the renewal date to evaluate.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "dropped usage due to deprecated reporting export feature",
+              "prediction": "Honestly, usage has dropped a lot on our end. A couple of the features we used most got deprecated.",
+              "prediction_category": "pain_point",
+              "score": 0.85
+            },
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 1,
+              "ground_truth": "limited time to evaluate before renewal",
+              "prediction": "It might, but I'd need to see it working before committing to anything, and I don't have a lot of time before the renewal date to evaluate.",
+              "prediction_category": "hesitation",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 2,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "pricing_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "Looker"
+          ],
+          "predictions": [
+            "We've actually started testing Looker as a replacement for that piece."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:25",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "We've actually started testing Looker as a replacement for that piece.",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "Looker",
+              "prediction": "We've actually started testing Looker as a replacement for that piece.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to arrange product demo this week",
+            "possible two-week renewal extension"
+          ],
+          "predictions": [
+            "let me get our product team to prioritize a demo of the fix this week, and we can push the renewal decision out by two weeks if needed."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:56",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "let me get our product team to prioritize a demo of the fix this week, and we can push the renewal decision out by two weeks if needed.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "rep to arrange product demo this week",
+              "prediction": "let me get our product team to prioritize a demo of the fix this week, and we can push the renewal decision out by two weeks if needed.",
+              "score": 0.75
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        }
+      }
+    },
+    {
+      "call_id": "recruitment_001",
+      "predictions": [
+        {
+          "timestamp": "00:08",
+          "speaker": "CUSTOMER",
+          "category": "pricing",
+          "evidence": "Sure, what's the compensation range on this one?",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:13",
+          "speaker": "REP",
+          "category": "budget",
+          "evidence": "It's budgeted between $95k-$110k depending on experience.",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "00:17",
+          "speaker": "CUSTOMER",
+          "category": "objection",
+          "evidence": "Hmm, that's a bit lower than what I was hoping for, I was targeting closer to $120k.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:37",
+          "speaker": "CUSTOMER",
+          "category": "competitor",
+          "evidence": "I'm also currently in later-stage interviews with another company",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:37",
+          "speaker": "CUSTOMER",
+          "category": "timeline",
+          "evidence": "so I'm not in a rush to decide anything here.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:46",
+          "speaker": "REP",
+          "category": "next_step",
+          "evidence": "Can I share your resume with the hiring manager in the meantime and follow up early next week?",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "compensation below target ($120k desired vs $95-110k offered)"
+          ],
+          "predictions": [
+            "Hmm, that's a bit lower than what I was hoping for, I was targeting closer to $120k.",
+            "I'm also currently in later-stage interviews with another company"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:17",
+              "speaker": "CUSTOMER",
+              "category": "objection",
+              "evidence": "Hmm, that's a bit lower than what I was hoping for, I was targeting closer to $120k.",
+              "status": "unresolved"
+            },
+            {
+              "timestamp": "00:37",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "I'm also currently in later-stage interviews with another company",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "compensation below target ($120k desired vs $95-110k offered)",
+              "prediction": "Hmm, that's a bit lower than what I was hoping for, I was targeting closer to $120k.",
+              "prediction_category": "objection",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 1,
+          "false_negatives": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.667
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "$95k-$110k budgeted range"
+          ],
+          "predictions": [
+            "Sure, what's the compensation range on this one?"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:08",
+              "speaker": "CUSTOMER",
+              "category": "pricing",
+              "evidence": "Sure, what's the compensation range on this one?",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [
+            "another company in later-stage interviews"
+          ],
+          "predictions": [
+            "I'm also currently in later-stage interviews with another company"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:37",
+              "speaker": "CUSTOMER",
+              "category": "competitor",
+              "evidence": "I'm also currently in later-stage interviews with another company",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "another company in later-stage interviews",
+              "prediction": "I'm also currently in later-stage interviews with another company",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "rep to share resume with hiring manager",
+            "follow-up early next week"
+          ],
+          "predictions": [
+            "Can I share your resume with the hiring manager in the meantime and follow up early next week?"
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:46",
+              "speaker": "REP",
+              "category": "next_step",
+              "evidence": "Can I share your resume with the hiring manager in the meantime and follow up early next week?",
+              "status": "resolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 1,
+              "prediction_index": 0,
+              "ground_truth": "follow-up early next week",
+              "prediction": "Can I share your resume with the hiring manager in the meantime and follow up early next week?",
+              "score": 0.875
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.667
+        }
+      }
+    },
+    {
+      "call_id": "callcenter_001",
+      "predictions": [
+        {
+          "timestamp": "00:00",
+          "speaker": "CUSTOMER",
+          "category": "pain_point",
+          "evidence": "Hi, I'm calling because my internet's been slow the past few days.",
+          "status": "unresolved"
+        },
+        {
+          "timestamp": "00:38",
+          "speaker": "REP",
+          "category": "pricing",
+          "evidence": "for that many devices, our 150 Mbps plan would handle it much better, it's $10 more per month than what you're on now.",
+          "status": "neutral"
+        },
+        {
+          "timestamp": "00:52",
+          "speaker": "CUSTOMER",
+          "category": "buying_signal",
+          "evidence": "Oh that's not bad actually. Can I upgrade right now?",
+          "status": "resolved"
+        },
+        {
+          "timestamp": "01:04",
+          "speaker": "CUSTOMER",
+          "category": "next_step",
+          "evidence": "Great, let's do that.",
+          "status": "resolved"
+        }
+      ],
+      "categories": {
+        "objections": {
+          "ground_truth": [
+            "initial complaint about slow speeds (resolved via upsell)"
+          ],
+          "predictions": [
+            "Hi, I'm calling because my internet's been slow the past few days."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:00",
+              "speaker": "CUSTOMER",
+              "category": "pain_point",
+              "evidence": "Hi, I'm calling because my internet's been slow the past few days.",
+              "status": "unresolved"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "initial complaint about slow speeds (resolved via upsell)",
+              "prediction": "Hi, I'm calling because my internet's been slow the past few days.",
+              "prediction_category": "pain_point",
+              "score": 0.85
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "pricing_mentions": {
+          "ground_truth": [
+            "upgrade to 150 Mbps plan for $10 more per month"
+          ],
+          "predictions": [
+            "for that many devices, our 150 Mbps plan would handle it much better, it's $10 more per month than what you're on now."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "00:38",
+              "speaker": "REP",
+              "category": "pricing",
+              "evidence": "for that many devices, our 150 Mbps plan would handle it much better, it's $10 more per month than what you're on now.",
+              "status": "neutral"
+            }
+          ],
+          "matches": [
+            {
+              "ground_truth_index": 0,
+              "prediction_index": 0,
+              "ground_truth": "upgrade to 150 Mbps plan for $10 more per month",
+              "prediction": "for that many devices, our 150 Mbps plan would handle it much better, it's $10 more per month than what you're on now.",
+              "score": 1.0
+            }
+          ],
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "competitor_mentions": {
+          "ground_truth": [],
+          "predictions": [],
+          "prediction_details": [],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "next_steps": {
+          "ground_truth": [
+            "plan upgrade processed immediately, active within the hour"
+          ],
+          "predictions": [
+            "Great, let's do that."
+          ],
+          "prediction_details": [
+            {
+              "timestamp": "01:04",
+              "speaker": "CUSTOMER",
+              "category": "next_step",
+              "evidence": "Great, let's do that.",
+              "status": "resolved"
+            }
+          ],
+          "matches": [],
+          "true_positives": 0,
+          "false_positives": 1,
+          "false_negatives": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    }
+  ]
+}

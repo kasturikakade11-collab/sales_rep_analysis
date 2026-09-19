@@ -1,47 +1,63 @@
 """
-Ingestion module: reads a raw transcript .txt file and converts it
-into a structured pandas DataFrame — one row per speaker turn.
+Ingestion module: reads a raw sales-call transcript .txt file and
+converts it into a structured pandas DataFrame — one row per speaker turn.
 
-NOTE ON TIMESTAMPS: our synthetic transcripts don't include real
-timing data (they weren't generated from timed audio). To still
-support pace calculations, this parser ESTIMATES a timestamp for
-each turn based on an average speaking rate (130 words/minute is a
-reasonable conversational average). If you later get transcripts
-with real timestamps (e.g. from Whisper output, which does provide
-them), swap the estimate_timestamps() step for parsing the real
-timestamps instead — the rest of the pipeline doesn't need to change.
+Expected transcript format:
+
+    [00:01] Rep: Hello, thanks for joining.
+    [00:07] Customer: Thanks, happy to be here.
+    [00:17] Rep: Let's discuss your requirements.
+
+The timestamps from the transcript are preserved as real timestamps.
 """
 
 import pandas as pd
 import re
 
-AVERAGE_WORDS_PER_MINUTE = 130  # used only for estimated timestamps
+
+# Matches:
+# [00:01] Rep: Hello...
+# [01:14] Customer: Yes...
+TIMESTAMP_PATTERN = re.compile(
+    r"^\[(\d{2}):(\d{2})\]\s*(Rep|Customer):\s*(.*)$"
+)
 
 
 def parse_transcript(file_path: str) -> pd.DataFrame:
     """
-    Reads a transcript file formatted as:
-        Rep: some text here
-        Customer: some text here
-    Returns a DataFrame with columns:
-        turn_number, speaker, text, word_count,
-        est_start_time_sec, est_end_time_sec
+    Reads a transcript and returns a DataFrame with columns:
+
+        turn_number
+        speaker
+        text
+        word_count
+        start_time_sec
+        end_time_sec
     """
+
     rows = []
-    with open(file_path, "r") as f:
+
+    with open(file_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     turn_number = 0
+
     for line in lines:
         line = line.strip()
+
         if not line:
             continue
 
-        match = re.match(r"^(Rep|Customer):\s*(.*)$", line)
-        if not match:
-            continue  # skip malformed lines rather than crashing
+        match = TIMESTAMP_PATTERN.match(line)
 
-        speaker, text = match.groups()
+        if not match:
+            # Skip malformed/unrecognized lines
+            continue
+
+        minutes, seconds, speaker, text = match.groups()
+
+        start_time_sec = int(minutes) * 60 + int(seconds)
+
         word_count = len(text.split())
 
         rows.append({
@@ -49,38 +65,63 @@ def parse_transcript(file_path: str) -> pd.DataFrame:
             "speaker": speaker,
             "text": text,
             "word_count": word_count,
+            "start_time_sec": start_time_sec,
         })
+
         turn_number += 1
 
     df = pd.DataFrame(rows)
-    df = _estimate_timestamps(df)
-    return df
 
+    if df.empty:
+        # Return a DataFrame with the expected columns
+        # instead of creating a partially structured DataFrame.
+        return pd.DataFrame(columns=[
+            "turn_number",
+            "speaker",
+            "text",
+            "word_count",
+            "start_time_sec",
+            "end_time_sec"
+        ])
 
-def _estimate_timestamps(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Adds est_start_time_sec and est_end_time_sec columns based on
-    cumulative word count and an average speaking pace. This is a
-    stand-in for real timing data — see module docstring.
-    """
-    seconds_per_word = 60 / AVERAGE_WORDS_PER_MINUTE
-    current_time = 0.0
-    starts, ends = [], []
+    # Calculate end time of each speaker turn.
+    #
+    # For every turn except the last:
+    # current turn ends when the next turn begins.
+    #
+    # For the final turn:
+    # estimate its duration from word count using 130 WPM.
+    df["end_time_sec"] = df["start_time_sec"].shift(-1)
 
-    for _, row in df.iterrows():
-        duration = row["word_count"] * seconds_per_word
-        starts.append(round(current_time, 1))
-        current_time += duration
-        ends.append(round(current_time, 1))
+    average_words_per_minute = 130
+    seconds_per_word = 60 / average_words_per_minute
 
-    df["est_start_time_sec"] = starts
-    df["est_end_time_sec"] = ends
+    last_index = df.index[-1]
+
+    final_duration = (
+        df.loc[last_index, "word_count"] * seconds_per_word
+    )
+
+    df.loc[last_index, "end_time_sec"] = (
+        df.loc[last_index, "start_time_sec"] + final_duration
+    )
+
+    df["start_time_sec"] = df["start_time_sec"].astype(float)
+    df["end_time_sec"] = df["end_time_sec"].astype(float)
+
     return df
 
 
 if __name__ == "__main__":
-    # Quick manual test
-    df = parse_transcript("data/transcripts/saas_001.txt")
-    print(df)
+    # Manual test using one of the actual transcripts
+    df = parse_transcript("data/transcripts/saas_002.txt")
+
+    print(df.to_string(index=False))
+
     print(f"\nTotal turns: {len(df)}")
-    print(f"Total estimated call duration: {df['est_end_time_sec'].iloc[-1]} sec")
+
+    if len(df):
+        print(
+            f"Estimated final call time: "
+            f"{df['end_time_sec'].iloc[-1]:.1f} seconds"
+        )

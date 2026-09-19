@@ -1,62 +1,117 @@
 """
-Analysis module: computes talk-ratio, pace, and filler-word metrics
-from the DataFrame produced by ingestion/parser.py.
+Analysis module for sales-call metrics.
 
-These metrics feed directly into Agent 3 (coaching feedback) later —
-e.g. "you talked 78% of the call" or "your pace spiked during the
-pricing discussion" are the kinds of things Agent 3 will reference.
+Calculates:
+1. Rep vs customer talk ratio
+2. Speaking pace
+3. Filler-word usage
+
+These metrics are later passed to the coaching agent.
 """
 
 import pandas as pd
 import re
 
-# Common filler words to flag. Expand this list based on what you
-# actually see in real transcripts.
-FILLER_WORDS = {"um", "uh", "like", "basically", "actually", "you know", "sort of", "kind of"}
+
+# Common filler words/phrases.
+FILLER_WORDS = {
+    "um",
+    "uh",
+    "like",
+    "basically",
+    "actually",
+    "you know",
+    "sort of",
+    "kind of",
+}
 
 
 def calculate_talk_ratio(df: pd.DataFrame) -> dict:
     """
-    Returns rep vs. customer talk-time share, measured by word count
-    (a reasonable proxy for talk time in the absence of real audio
-    duration).
-    """
-    totals = df.groupby("speaker")["word_count"].sum()
-    total_words = totals.sum()
+    Calculates the percentage of words spoken by the Rep
+    and Customer.
 
-    rep_words = totals.get("Rep", 0)
-    customer_words = totals.get("Customer", 0)
+    Word count is used as a proxy for talk time because
+    transcript files do not contain actual audio duration.
+    """
+
+    if df.empty:
+        return {
+            "rep_word_count": 0,
+            "customer_word_count": 0,
+            "rep_talk_ratio_pct": 0,
+            "customer_talk_ratio_pct": 0,
+        }
+
+    totals = df.groupby("speaker")["word_count"].sum()
+
+    rep_words = int(totals.get("Rep", 0))
+    customer_words = int(totals.get("Customer", 0))
+
+    total_words = rep_words + customer_words
 
     return {
-        "rep_word_count": int(rep_words),
-        "customer_word_count": int(customer_words),
-        "rep_talk_ratio_pct": round((rep_words / total_words) * 100, 1) if total_words else 0,
-        "customer_talk_ratio_pct": round((customer_words / total_words) * 100, 1) if total_words else 0,
+        "rep_word_count": rep_words,
+        "customer_word_count": customer_words,
+        "rep_talk_ratio_pct": round(
+            (rep_words / total_words) * 100, 1
+        ) if total_words else 0,
+
+        "customer_talk_ratio_pct": round(
+            (customer_words / total_words) * 100, 1
+        ) if total_words else 0,
     }
 
 
 def calculate_pace(df: pd.DataFrame) -> dict:
     """
-    Returns overall and rep-only speaking pace in words per minute,
-    using the estimated timestamps from the parser.
-    NOTE: since these are estimated timestamps (see parser.py), pace
-    here will be close to the AVERAGE_WORDS_PER_MINUTE constant by
-    construction. This becomes meaningful once real timestamps are
-    used — keep the calculation in place so the pipeline doesn't
-    need to change later.
+    Calculates approximate speaking pace using transcript timestamps.
+
+    Since transcript timestamps represent the boundaries between
+    speaker turns, the calculated pace is an approximate observed
+    pace rather than true audio-level speaking speed.
+
+    Returns:
+        overall_pace_wpm
+        rep_pace_wpm
     """
-    total_duration_sec = df["est_end_time_sec"].iloc[-1] if len(df) else 0
+
+    if df.empty:
+        return {
+            "overall_pace_wpm": 0,
+            "rep_pace_wpm": 0,
+        }
+
+    # Overall call duration
+    call_start = df["start_time_sec"].min()
+    call_end = df["end_time_sec"].max()
+
+    total_duration_sec = call_end - call_start
     total_words = df["word_count"].sum()
 
-    rep_df = df[df["speaker"] == "Rep"]
-    rep_words = rep_df["word_count"].sum()
-    rep_duration_sec = (
-        rep_df["est_end_time_sec"].max() - rep_df["est_start_time_sec"].min()
-        if len(rep_df) else 0
+    overall_wpm = (
+        (total_words / total_duration_sec) * 60
+        if total_duration_sec > 0
+        else 0
     )
 
-    overall_wpm = (total_words / total_duration_sec) * 60 if total_duration_sec else 0
-    rep_wpm = (rep_words / rep_duration_sec) * 60 if rep_duration_sec else 0
+    # Rep-only turns
+    rep_df = df[df["speaker"] == "Rep"].copy()
+
+    if len(rep_df):
+        rep_duration_sec = (
+            rep_df["end_time_sec"] - rep_df["start_time_sec"]
+        ).sum()
+
+        rep_words = rep_df["word_count"].sum()
+
+        rep_wpm = (
+            (rep_words / rep_duration_sec) * 60
+            if rep_duration_sec > 0
+            else 0
+        )
+    else:
+        rep_wpm = 0
 
     return {
         "overall_pace_wpm": round(overall_wpm, 1),
@@ -66,13 +121,36 @@ def calculate_pace(df: pd.DataFrame) -> dict:
 
 def count_filler_words(df: pd.DataFrame) -> dict:
     """
-    Counts filler-word usage, broken down by speaker.
+    Counts common filler words/phrases separately for
+    the Rep and Customer.
     """
-    counts = {"Rep": 0, "Customer": 0}
+
+    counts = {
+        "Rep": 0,
+        "Customer": 0,
+    }
+
+    if df.empty:
+        return {
+            "rep_filler_count": 0,
+            "customer_filler_count": 0,
+        }
+
     for _, row in df.iterrows():
-        text_lower = row["text"].lower()
+
+        speaker = row["speaker"]
+
+        if speaker not in counts:
+            continue
+
+        text_lower = str(row["text"]).lower()
+
         for filler in FILLER_WORDS:
-            counts[row["speaker"]] += len(re.findall(rf"\b{re.escape(filler)}\b", text_lower))
+            pattern = rf"\b{re.escape(filler)}\b"
+            counts[speaker] += len(
+                re.findall(pattern, text_lower)
+            )
+
     return {
         "rep_filler_count": counts["Rep"],
         "customer_filler_count": counts["Customer"],
@@ -81,20 +159,28 @@ def count_filler_words(df: pd.DataFrame) -> dict:
 
 def get_full_metrics(df: pd.DataFrame) -> dict:
     """
-    Convenience function — runs all three analyses and returns one
-    combined dict. This is what gets passed into Agent 3 later.
+    Runs all available quantitative analyses and combines
+    the results into a single dictionary.
     """
+
     metrics = {}
+
     metrics.update(calculate_talk_ratio(df))
     metrics.update(calculate_pace(df))
     metrics.update(count_filler_words(df))
+
     return metrics
 
 
 if __name__ == "__main__":
-    from parser import parse_transcript
-    import json
 
-    df = parse_transcript("data/transcripts/saas_001.txt")
+    import json
+    from ingestion.parser import parse_transcript
+
+    df = parse_transcript(
+        "data/transcripts/saas_002.txt"
+    )
+
     metrics = get_full_metrics(df)
+
     print(json.dumps(metrics, indent=2))

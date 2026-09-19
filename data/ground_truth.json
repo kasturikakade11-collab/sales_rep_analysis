@@ -1,0 +1,213 @@
+{
+  "saas_001": {
+    "objections": [
+      "pricing comparison to HubSpot",
+      "onboarding/implementation timeline concern"
+    ],
+    "pricing_mentions": [
+      "$499/month for up to 10 seats"
+    ],
+    "competitor_mentions": [
+      "HubSpot"
+    ],
+    "next_steps": [
+      "send one-pager and pricing sheet",
+      "follow-up call next Thursday at 2pm"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "budget authority confirmed ($600/mo approved), timeline and need clear"
+    }
+  },
+  "saas_002": {
+    "objections": [
+      "unclear decision-maker / approval process"
+    ],
+    "pricing_mentions": [
+      "$1,200/month plan (previously discussed)"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "rep to send internal forwarding material; customer to try to identify stakeholder"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "no confirmed budget authority, no clear timeline, decision process undefined"
+    }
+  },
+  "saas_003": {
+    "objections": [
+      "general hesitation / not ready to decide",
+      "comparing against Salesforce module"
+    ],
+    "pricing_mentions": [],
+    "competitor_mentions": [
+      "Salesforce"
+    ],
+    "next_steps": [
+      "rep to send case studies",
+      "follow-up check-in in four weeks"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "no clear timeline, hesitation language throughout, need not reconfirmed"
+    }
+  },
+  "saas_004": {
+    "objections": [
+      "per-seat pricing at scale"
+    ],
+    "pricing_mentions": [
+      "$25/seat standard, $18/seat enterprise tier above 50 seats"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "rep to send contract by Friday",
+      "target start date next week"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "budget authority confirmed up to $50k, clear timeline (before next quarter), need confirmed"
+    }
+  },
+  "insurance_001": {
+    "objections": [
+      "premium higher than competitor quote",
+      "budget constraints this year"
+    ],
+    "pricing_mentions": [
+      "\u20b918,000/year for 5 lakh coverage",
+      "\u20b911,500/year for 3 lakh coverage"
+    ],
+    "competitor_mentions": [
+      "ICICI Lombard"
+    ],
+    "next_steps": [
+      "rep to call back Tuesday"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "budget concern raised and unresolved, decision deferred pending discussion with spouse"
+    }
+  },
+  "realestate_001": {
+    "objections": [
+      "price above stated budget (85L vs 75L target)"
+    ],
+    "pricing_mentions": [
+      "listed at 85 lakh, offer to be floated at 78 lakh"
+    ],
+    "competitor_mentions": [
+      "another agent's listing in the same complex"
+    ],
+    "next_steps": [
+      "rep to submit 78 lakh offer today",
+      "update customer by tomorrow evening"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "budget range clear, timeline clear (6 weeks), need confirmed"
+    }
+  },
+  "automotive_001": {
+    "objections": [
+      "price comparison to competitor dealership"
+    ],
+    "pricing_mentions": [
+      "on-road price quote of \u20b99.8 lakh"
+    ],
+    "competitor_mentions": [
+      "Honda dealership across town"
+    ],
+    "next_steps": [
+      "rep to hold quote for one week"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "no confirmed budget target, decision timeline vague ('get back to you')"
+    }
+  },
+  "ecommerce_001": {
+    "objections": [],
+    "pricing_mentions": [
+      "\u20b92,499 discounted from \u20b93,199",
+      "extra 10% off with code WELCOME10"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "customer proceeding to checkout"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "low-consideration purchase, no BANT framework applicable, customer ready to buy"
+    }
+  },
+  "retail_001": {
+    "objections": [],
+    "pricing_mentions": [
+      "jacket 20% off at $64",
+      "scarf add-on at $15"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "proceeding to checkout with both items"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "in-store impulse purchase, not applicable"
+    }
+  },
+  "customer_success_001": {
+    "objections": [
+      "dropped usage due to deprecated reporting export feature",
+      "limited time to evaluate before renewal"
+    ],
+    "pricing_mentions": [],
+    "competitor_mentions": [
+      "Looker"
+    ],
+    "next_steps": [
+      "rep to arrange product demo this week",
+      "possible two-week renewal extension"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "need is now in question (feature gap causing churn risk), timeline tight and uncertain"
+    }
+  },
+  "recruitment_001": {
+    "objections": [
+      "compensation below target ($120k desired vs $95-110k offered)"
+    ],
+    "pricing_mentions": [
+      "$95k-$110k budgeted range"
+    ],
+    "competitor_mentions": [
+      "another company in later-stage interviews"
+    ],
+    "next_steps": [
+      "rep to share resume with hiring manager",
+      "follow-up early next week"
+    ],
+    "bant_gap": {
+      "present": true,
+      "reason": "candidate not urgent, comparing against a competing offer, compensation gap unresolved"
+    }
+  },
+  "callcenter_001": {
+    "objections": [
+      "initial complaint about slow speeds (resolved via upsell)"
+    ],
+    "pricing_mentions": [
+      "upgrade to 150 Mbps plan for $10 more per month"
+    ],
+    "competitor_mentions": [],
+    "next_steps": [
+      "plan upgrade processed immediately, active within the hour"
+    ],
+    "bant_gap": {
+      "present": false,
+      "reason": "customer confirmed and ready to purchase upgrade immediately"
+    }
+  }
+}

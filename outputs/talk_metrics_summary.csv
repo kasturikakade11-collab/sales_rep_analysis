@@ -1,0 +1,13 @@
+call_id,rep_word_count,customer_word_count,rep_talk_ratio_pct,customer_talk_ratio_pct,overall_pace_wpm,rep_pace_wpm,rep_filler_count,customer_filler_count
+automotive_001,68,48,58.6,41.4,120.6,120.0,0,0
+callcenter_001,88,44,66.7,33.3,120.3,122.8,0,1
+customer_success_001,80,67,54.4,45.6,119.4,117.1,0,1
+ecommerce_001,39,33,54.2,45.8,106.4,108.3,0,0
+insurance_001,86,51,62.8,37.2,118.5,117.3,0,0
+realestate_001,73,65,52.9,47.1,120.3,118.4,0,0
+recruitment_001,69,48,59.0,41.0,122.3,129.4,0,0
+retail_001,60,31,65.9,34.1,110.0,117.6,0,1
+saas_001,92,70,56.8,43.2,117.0,117.3,0,1
+saas_002,82,78,51.2,48.8,118.6,123.0,1,0
+saas_003,70,60,53.8,46.2,119.6,130.3,0,1
+saas_004,74,62,54.4,45.6,120.3,120.5,1,1
