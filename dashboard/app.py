@@ -38,6 +38,27 @@ GROUND_TRUTH_PATH = os.path.join(BASE, "data", "ground_truth.json")
 TRANSCRIPTS_DIR = os.path.join(BASE, "data", "transcripts")
 
 # ---------- LOAD DATA ----------
+def generate_coaching_feedback(call_row, gt):
+    feedback = []
+    
+    if call_row['rep_talk_ratio_pct'] > 58:
+        feedback.append("⚠️ You talked significantly more than the customer — try asking more open-ended questions to let them share concerns.")
+    
+    if call_row['rep_filler_count'] > 3:
+        feedback.append(f"⚠️ {call_row['rep_filler_count']} filler words detected — practice pausing instead of saying 'um'/'so'.")
+    
+    if gt.get('bant_gap', {}).get('present', False):
+        feedback.append(f"⚠️ Deal risk: {gt['bant_gap'].get('reason', '')} — address this directly in your next touchpoint.")
+    
+    if not gt.get('pricing_mentions'):
+        feedback.append("💡 Pricing wasn't discussed this call — confirm budget fit before the next call to avoid late-stage surprises.")
+    
+    if not feedback:
+        feedback.append("✅ Solid call — good balance of talk time, no major risk signals detected.")
+    
+    return feedback
+
+
 @st.cache_data
 def load_data():
     try:
@@ -156,6 +177,11 @@ elif page == "Call Detail":
             st.error(f"⚠️ At Risk — {gt['bant_gap'].get('reason', '')}")
         else:
             st.success(f"✅ Healthy — {gt.get('bant_gap', {}).get('reason', '')}")
+            
+        st.subheader("🎯 Coaching Feedback")
+        coaching_points = generate_coaching_feedback(call_row, gt)
+        for point in coaching_points:
+            st.write(point)
 
         st.subheader("Extracted Moments")
         st.write("**Objections:**", gt.get("objections", []) or "None")
