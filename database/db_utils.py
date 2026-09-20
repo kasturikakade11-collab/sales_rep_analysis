@@ -4,7 +4,7 @@ import json
 import os
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(THIS_DIR, "..", "..", "data", "calls.db")
+DB_PATH = os.path.join(THIS_DIR, "..", "data", "calls.db")
 SCHEMA_PATH = os.path.join(THIS_DIR, "schema.sql")
 
 

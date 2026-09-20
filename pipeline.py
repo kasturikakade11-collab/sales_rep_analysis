@@ -1,32 +1,37 @@
-from src.ingestion.parser import parse_transcript
-from src.analysis.talk_metrics import calculate_metrics
+from ingestion.parser import parse_transcript
+from analysis.talk_metrics import get_full_metrics
 
-from src.agents.extraction_agent import (
-    extract_moments
-)
+from agents.extraction_agent import (extract_moments)
 
-from src.agents.risk_agent import (
-    analyze_risk
-)
+from agents.risk_agent import (analyze_risk)
 
-from src.agents.coaching_agent import (
-    generate_coaching
-)
+from agents.coaching_agent import (generate_coaching)
 
+from validation.extraction_validator import validate_extraction
+
+from validation.coaching_validator import validate_coaching
+
+from agents.followup_email_agent import generate_followup_email
 
 def run_pipeline(
     transcript_path: str
 ):
-
     print("\n1. Loading transcript...")
 
     df = parse_transcript(
         transcript_path
     )
 
+
+    def format_timestamp(seconds):
+        minutes = int(seconds // 60)
+        secs = int(seconds % 60)
+        return f"{minutes:02d}:{secs:02d}"
+
+
     transcript = "\n".join(
         (
-            f"[{row.timestamp}] "
+            f"[{format_timestamp(row.start_time_sec)}] "
             f"{row.speaker}: "
             f"{row.text}"
         )
@@ -38,7 +43,7 @@ def run_pipeline(
 
     print("\n2. Calculating metrics...")
 
-    metrics = calculate_metrics(df)
+    metrics = get_full_metrics(df)
 
     print(metrics)
 
@@ -50,6 +55,28 @@ def run_pipeline(
     )
 
     print("Agent 1 completed.")
+
+    print("\n3.5 Validating Agent 1 output...")
+
+    extracted, validation_errors = validate_extraction(
+        extracted,
+        transcript
+    )
+
+    print(
+        f"Validation completed. "
+        f"Removed {len(validation_errors)} invalid moments."
+    )
+
+    if validation_errors:
+        print("\nValidation issues:")
+
+        for error in validation_errors:
+            print(error)
+
+        print("\n3.7 Generating follow-up email...")
+    followup_email = generate_followup_email(extracted)
+    print("Follow-up email generated.")
 
 
     print("\n4. Running Agent 2...")
@@ -72,6 +99,26 @@ def run_pipeline(
 
     print("Agent 3 completed.")
 
+    print("\n5.5 Validating Agent 3 output...")
+
+    coaching, coaching_errors = validate_coaching(
+        coaching,
+        extracted
+    )
+
+    print(
+        f"Coaching validation completed. "
+        f"Removed {len(coaching_errors)} invalid coaching points."
+    )
+
+    if coaching_errors:
+        print("\nCoaching validation issues:")
+
+        for error in coaching_errors:
+            print(error)
+
+
+
 
     return {
         "metrics": metrics,
@@ -80,7 +127,8 @@ def run_pipeline(
         "risk_analysis":
             risk.model_dump(),
         "coaching_report":
-            coaching.model_dump()
+            coaching.model_dump(),
+        "followup_email": followup_email
     }
 
 
@@ -112,3 +160,6 @@ if __name__ == "__main__":
     print(
         result["coaching_report"]
     )
+
+    print("\nFOLLOW-UP EMAIL DRAFT")
+    print(result["followup_email"])

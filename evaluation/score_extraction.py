@@ -526,9 +526,16 @@ def pricing_match_score(ground_truth: str, prediction: str) -> float:
     number_score = numeric_overlap(ground_truth, prediction)
     lexical_score = lexical_similarity(ground_truth, prediction)
     overlap_score = token_overlap(ground_truth, prediction)
+    gt_numbers = extract_numbers(ground_truth)
+    pred_numbers = extract_numbers(prediction)
 
-    if number_score > 0:
-        return max(number_score, lexical_score, overlap_score)
+    # If the ground truth names a concrete amount, require the same amount.
+    # This prevents a vague question such as "any discount codes?" from
+    # matching a specific price such as "$64".
+    if gt_numbers:
+        if number_score > 0:
+            return max(number_score, lexical_score, overlap_score)
+        return 0.0
 
     return max(lexical_score, overlap_score)
 
@@ -597,6 +604,13 @@ def competitor_match_score(ground_truth: str, prediction: str) -> float:
     pred_tokens = token_set(pred)
     if gt_tokens and gt_tokens.issubset(pred_tokens):
         return 1.0
+
+    # Possessive/plural normalization, e.g. "another agent's listing"
+    # vs "another agent listing".
+    gt_stem = re.sub(r"\b(agents|agent|providers|provider|companies|company|vendors|vendor)s?\b", "competitor", gt)
+    pred_stem = re.sub(r"\b(agents|agent|providers|provider|companies|company|vendors|vendor)s?\b", "competitor", pred)
+    if token_overlap(gt_stem, pred_stem) >= 0.45:
+        return 0.75
 
     overlap = token_overlap(gt, pred)
     lexical = lexical_similarity(gt, pred)
@@ -683,16 +697,134 @@ def temporal_overlap(text_a: str, text_b: str) -> float:
     return len(a_time & b_time) / len(a_time | b_time)
 
 
-def next_step_match_score(ground_truth: str, prediction: str) -> float:
-    lexical = lexical_similarity(ground_truth, prediction)
-    overlap = token_overlap(ground_truth, prediction)
-    action = action_overlap(ground_truth, prediction)
-    temporal = temporal_overlap(ground_truth, prediction)
+def next_step_action_group(text: str) -> set:
+    """Map different phrasings to normalized next-step intents."""
+    tokens = set(tokenize(text))
+    normalized = normalize_text(text)
 
+    groups = {
+        "send_material": {"send", "forward", "share", "provide", "email", "mail", "deliver"},
+        "follow_up": {"follow", "followup", "call", "callback", "checkin", "check", "touch", "reconnect", "contact"},
+        "schedule": {"schedule", "scheduled", "arrange", "book", "setup", "set", "meeting", "session", "calendar"},
+        "purchase": {"buy", "purchase", "order", "checkout", "proceed", "signup", "sign", "upgrade"},
+        "submit_offer": {"submit", "submission", "offer", "proposal", "application", "bid"},
+        "internal_review": {"review", "evaluate", "assess", "consider", "numbers", "internally", "stakeholders", "team"},
+        "discuss": {"discuss", "discussion", "talk", "speak", "meet"},
+        "confirm": {"confirm", "confirmation", "approve", "approval", "signoff", "signature"},
+        "contract": {"contract", "agreement", "sign"},
+        "implementation": {"implement", "implementation", "activate", "activation", "launch", "start", "deploy", "onboard"},
+        "hold_quote": {"hold", "reserve", "lock"},
+        "identify_stakeholder": {"identify", "stakeholder", "decision", "director", "cfo", "procurement"},
+    }
+
+    matched = {name for name, words in groups.items() if tokens.intersection(words)}
+
+    # Strong phrase-level intent signals.
+    phrase_groups = {
+        "internal_review": ["go through the numbers", "review internally", "review the proposal", "review with the team", "discuss internally", "take a look internally"],
+        "follow_up": ["get back to you", "get back to me", "touch base", "check in", "follow up", "call back", "call again"],
+        "send_material": ["send it over", "send across", "send the", "share the", "forward the", "provide the"],
+        "schedule": ["set up", "set a meeting", "calendar invite", "follow-up session", "book a"],
+        "purchase": ["place the order", "proceed with", "move forward", "go ahead", "proceed", "checkout"],
+        "submit_offer": ["submit the offer", "send the offer", "send an offer", "submit the proposal", "place the bid"],
+        "contract": ["send the contract", "get the contract", "sign the contract", "contract over"],
+        "hold_quote": ["hold the quote", "keep the quote", "lock the quote"],
+        "implementation": ["go live", "start implementation", "activate", "activation", "launch"],
+        "identify_stakeholder": ["identify the stakeholder", "find the decision maker", "loop in", "get approval", "bring in the"],
+    }
+    for group, phrases in phrase_groups.items():
+        if any(normalize_text(phrase) in normalized for phrase in phrases):
+            matched.add(group)
+
+    return matched
+
+
+def contains_acceptance_signal(text: str) -> bool:
+    normalized = normalize_text(text)
+    phrases = [
+        "that works", "works for me", "works well", "sounds good", "sounds great",
+        "yes lets do that", "yes lets", "lets do that", "that is fine", "thats fine",
+        "perfect", "that will work", "that should work", "okay lets do it",
+        "okay lets", "sure lets do it", "sure why not", "why not", "go ahead",
+        "i am fine with that", "im fine with that", "fine with that",
+    ]
+    return any(normalize_text(p) in normalized for p in phrases)
+
+
+def contains_future_reference(text: str) -> bool:
+    n = normalize_text(text)
+    return bool(set(tokenize(n)) & TEMPORAL_WORDS)
+
+
+def _split_next_step_evidence(evidence: str) -> List[str]:
+    """Split one extraction moment containing multiple concrete actions."""
+    text = str(evidence or "").strip()
+    if not text:
+        return []
+    # Preserve short acceptance statements as a single item.
+    if contains_acceptance_signal(text) and len(text.split()) <= 10:
+        return [text]
+    parts = re.split(r"\s+(?:and then|and|;|, then)\s+", text, flags=re.IGNORECASE)
+    parts = [p.strip(" .") for p in parts if p.strip(" .")]
+    return parts or [text]
+
+
+def next_step_match_score(ground_truth: str, prediction: str) -> float:
+    """Robust semantic matching for next-step intent."""
+    gt = str(ground_truth or "")
+    pred = str(prediction or "")
+    lexical = lexical_similarity(gt, pred)
+    overlap = token_overlap(gt, pred)
+    action = action_overlap(gt, pred)
+    temporal = temporal_overlap(gt, pred)
+
+    gt_groups = next_step_action_group(gt)
+    pred_groups = next_step_action_group(pred)
+    group_overlap = gt_groups & pred_groups
+
+    # Exact/near-exact evidence is always strong.
+    if lexical >= 0.82 or overlap >= 0.70:
+        return max(lexical, overlap)
+
+    # Shared normalized intent + supporting context.
+    if group_overlap:
+        score = 0.64
+        if temporal > 0:
+            score += 0.12
+        if lexical >= 0.25 or overlap >= 0.20:
+            score += 0.08
+        # Shared object words make the semantic match safer.
+        object_words = {"contract", "proposal", "pricing", "sheet", "case", "studies", "offer", "resume", "calendar", "demo", "quote", "order", "checkout", "numbers", "stakeholder", "implementation", "renewal", "coverage", "application"}
+        if token_set(gt) & token_set(pred) & object_words:
+            score += 0.08
+        return min(1.0, max(score, lexical, overlap))
+
+    # Customer acceptance can correspond to a previously proposed concrete action.
+    if contains_acceptance_signal(pred) and gt_groups:
+        if temporal > 0 or any(g in gt_groups for g in {"follow_up", "schedule", "purchase", "implementation", "hold_quote", "contract"}):
+            return 0.76
+
+    # Similar action + timing.
     if action > 0 and temporal > 0:
-        return max(lexical, overlap, min(1.0, 0.50 + action * 0.25 + temporal * 0.25))
+        return max(lexical, overlap, min(1.0, 0.52 + action * 0.24 + temporal * 0.24))
 
     return max(lexical, overlap, action)
+
+
+def _expand_next_step_predictions(predictions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    expanded = []
+    for prediction in predictions:
+        evidence = prediction.get("evidence", "")
+        parts = _split_next_step_evidence(evidence)
+        if len(parts) <= 1:
+            expanded.append(prediction)
+            continue
+        for part in parts:
+            clone = dict(prediction)
+            clone["evidence"] = part
+            clone["_expanded_from"] = evidence
+            expanded.append(clone)
+    return expanded
 
 
 def match_next_steps(
@@ -706,6 +838,7 @@ def match_next_steps(
     if not predictions:
         return [], 0, 0, len(ground_truth)
 
+    predictions = _expand_next_step_predictions(predictions)
     candidate_pairs = []
     for gt_index, gt_text in enumerate(ground_truth):
         for pred_index, prediction in enumerate(predictions):
@@ -713,11 +846,10 @@ def match_next_steps(
             candidate_pairs.append((score, gt_index, pred_index))
 
     candidate_pairs.sort(key=lambda x: x[0], reverse=True)
-
     matched_gt = set()
     matched_predictions = set()
     matches = []
-    MATCH_THRESHOLD = 0.50
+    MATCH_THRESHOLD = 0.55
 
     for score, gt_index, pred_index in candidate_pairs:
         if score < MATCH_THRESHOLD:
@@ -737,7 +869,6 @@ def match_next_steps(
     true_positives = len(matches)
     false_positives = len(predictions) - true_positives
     false_negatives = len(ground_truth) - true_positives
-
     return matches, true_positives, false_positives, false_negatives
 
 
@@ -886,7 +1017,7 @@ def aggregate_results(per_call_results: List[Dict[str, Any]]) -> Dict[str, Any]:
             ),
             "pricing_mentions": "numerical + lexical matching",
             "competitor_mentions": "entity/token + lexical matching",
-            "next_steps": "action + temporal + lexical matching",
+            "next_steps": "semantic action-group + acceptance + action/temporal/lexical matching",
             "one_to_one_matching": True,
         },
         "category_performance": category_totals,
