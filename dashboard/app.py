@@ -108,6 +108,42 @@ def generate_coaching_feedback(call_row, gt):
     return feedback
 
 
+def generate_followup_email(call_row, gt):
+    next_steps = gt.get('next_steps', [])
+    pricing = gt.get('pricing_mentions', [])
+    competitors = gt.get('competitor_mentions', [])
+    
+    lines = []
+    lines.append("Subject: Great speaking with you — next steps\n")
+    lines.append("Hi [Customer Name],\n")
+    lines.append("Thank you for taking the time to speak with me today. Here's a quick recap of what we discussed:\n")
+    
+    if pricing:
+        lines.append("Pricing discussed:")
+        for p in pricing:
+            lines.append(f"  - {p}")
+        lines.append("")
+    
+    if competitors:
+        lines.append("You mentioned you're also considering:")
+        for c in competitors:
+            lines.append(f"  - {c}")
+        lines.append("I'd be happy to walk through how we compare whenever helpful.\n")
+    
+    if next_steps:
+        lines.append("Next steps:")
+        for step in next_steps:
+            lines.append(f"  - {step}")
+        lines.append("")
+    else:
+        lines.append("I'll follow up shortly with more details.\n")
+    
+    lines.append("Please let me know if you have any questions in the meantime.\n")
+    lines.append("Best regards,\n[Your Name]")
+    
+    return "\n".join(lines)
+
+
 @st.cache_data
 def load_data():
     try:
@@ -231,6 +267,12 @@ elif page == "Call Detail":
         coaching_points = generate_coaching_feedback(call_row, gt)
         for point in coaching_points:
             st.write(point)
+            
+            st.subheader("✉️ Follow-Up Email Draft")
+            email_draft = generate_followup_email(call_row, gt)
+
+            st.text_area("Editable draft — copy or edit as needed:", value=email_draft, height=300)
+
 
         st.subheader("Extracted Moments")
         st.write("**Objections:**", gt.get("objections", []) or "None")
