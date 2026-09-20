@@ -2,3 +2,5 @@ groq
 python-dotenv
 pydantic
 pandas
+plotly
+streamlit
